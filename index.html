@@ -1,1 +1,675 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>CV (Jinseok Ryu, PhD)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d4b0a3d4-99b7-42e8-bfba-4e5d7aedad7d" class="page serif"><header><div class="page-header-icon undefined"><img class="icon" src="CV%20(Jinseok%20Ryu,%20PhD)%20d4b0a3d499b742e8bfba4e5d7aedad7d/resume.png"/></div><h1 class="page-title">CV (Jinseok Ryu, PhD)</h1></header><div class="page-body"><h1 id="5fbd2afc-8b3d-4be5-92a1-65a9c1715e90" class="">Ryu, Jinseok</h1><ul id="248e93aa-baf2-4148-b33e-3bf631e3095d" class="bulleted-list"><li style="list-style-type:disc"><strong>E-mail :</strong> jinseuk56@gmail.com</li></ul><ul id="f169fbb3-1df6-40ca-8431-4c4c437fd9ce" class="bulleted-list"><li style="list-style-type:disc"><strong>ORCID :</strong> <a href="https://orcid.org/0000-0002-9558-3469">0000-0002-9558-3469</a></li></ul><ul id="41a1b72a-8d19-4d12-9f24-f1272f196b01" class="bulleted-list"><li style="list-style-type:disc"><strong>GitHub Repository :</strong>  <a href="https://github.com/jinseuk56">https://github.com/jinseuk56</a></li></ul><hr id="c9d2dd39-155e-4943-b443-eb2e7725cce4"/><div id="a0e64036-17f1-4131-9620-1628561ed74a" class="column-list"><div id="bbc1ec9b-f929-4f39-92a4-d86a47e6e217" style="width:50%" class="column"><h2 id="b9bc119f-d345-4de8-acdd-6f743e1e099e" class="">🔰Education</h2><p id="0bebe305-6245-4a4d-b874-720832eb56bb" class=""><strong>Ph.D.</strong>, Materials Science and Engineering, Seoul National University, South Korea
+<mark class="highlight-gray"><em>2017.03-2022.08 Combined MS/PhD
+(Advisor: Prof. Miyoung Kim)</em></mark></p><p id="695cf8d5-6a21-4392-ba14-2f4a5b23df17" class=""><strong>B.S.</strong>, Materials Science and Engineering, Seoul National University, South Korea
+<mark class="highlight-gray"><em>2009.03-2015.08</em></mark></p></div><div id="69f3a58a-d5e3-42fa-8994-335ffef9b87a" style="width:50%" class="column"><h2 id="4a036b22-d48e-43aa-8eda-adc6ade8f1b2" class="">🔰Career</h2><p id="89aa2f88-815c-4071-bbc2-a35444be4b7c" class=""><strong>Post Doctor</strong> (2022.09- )
+<mark class="highlight-gray">Research Institute of Advanced Materials, 
+Seoul National University, South Korea</mark></p></div></div><hr id="3ea7eab3-2f2b-4096-9052-11772dcde57f"/><h2 id="bf02318c-9dd8-4cdb-bf6d-1f955c4c3735" class="">🔰Skills</h2><p id="357bae38-3207-4381-93ab-13f4bea4749c" class=""><mark class="highlight-blue">(</mark><mark class="highlight-blue"><em>click </em></mark><mark class="highlight-blue"><strong>▷</strong></mark><mark class="highlight-blue"><em> for details)</em></mark></p><h3 id="3612bdc1-a994-4ef4-8e96-085d714ca689" class=""><details open=""><summary><span style="border-bottom:0.05em solid"><strong>S/TEM Experiment/Analysis </strong></span></summary></details></h3><div class="indented"><ul id="655119e6-99f1-42e5-a7e3-4377d287f1af" class="block-color-gray_background bulleted-list"><li style="list-style-type:disc"><strong>Themis Z, Tecnai F20</strong> (<em>Thermo Fisher Scientific</em>), <strong>JEM-2100F</strong> (<em>Jeol</em>)</li></ul><ul id="ac5c18e2-7f13-4a8e-a4b9-83fae248896f" class="block-color-gray_background bulleted-list"><li style="list-style-type:disc"><strong>Imaging</strong> (TEM/STEM/4D-STEM) &amp; <strong>analytical techniques </strong>(EELS/EDS)</li></ul><ul id="1211e38c-1fa8-4fe8-9ee6-ae72a1c402c3" class="block-color-gray_background toggle"><li><details open=""><summary><strong>Analysis of structure-property relationship</strong></summary><ul id="1e38d815-032f-4058-8569-f1267e189a8b" class="bulleted-list"><li style="list-style-type:disc">Atomic structure &amp; structural defect analysis</li></ul><ul id="19565b47-f4f5-4b1b-85d3-d6d3d7620a22" class="bulleted-list"><li style="list-style-type:disc">Amorphous structure analysis (RDF &amp; FEM)</li></ul><ul id="1ba7c70f-5a5f-4fae-8fd6-3b7280efd54c" class="bulleted-list"><li style="list-style-type:disc">Electronic structure &amp; quantitative chemical analysis</li></ul><ul id="43c4e5f2-2853-470e-a61f-e74d41253064" class="bulleted-list"><li style="list-style-type:disc">Tomographic reconstruction &amp; visualization</li></ul></details></li></ul></div><h3 id="e5b51bf7-49e9-469e-9f1d-e5cf3d7c7b2b" class=""><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Development of Computational Tools for S/TEM Analysis</strong></span></summary></details></h3><div class="indented"><ul id="bf635b26-e875-4075-bd15-ecac6f8470a3" class="block-color-teal_background bulleted-list"><li style="list-style-type:disc"><strong>Programming </strong>(<em>Python/DigitalMicrograph</em>)<strong> for S/TEM analysis</strong></li></ul><ul id="28f98182-7c10-4a01-8cdb-191be58c9620" class="block-color-teal_background toggle"><li><details open=""><summary><strong>Application of machine learning algorithms to S/TEM data analysis</strong></summary><ul id="704ed55e-e533-45be-9911-da3aa3f98ff0" class="bulleted-list"><li style="list-style-type:disc">Extraction of fundamental/hidden features from microscopy datasets</li></ul><ul id="c8535536-2b0e-43ad-b68d-416f5848ebfd" class="bulleted-list"><li style="list-style-type:disc">Deep learning, dimensionality reduction, cluster analysis, and their combinations</li></ul></details></li></ul><ul id="f131e3a7-61ff-4101-8d0d-7475a996763b" class="block-color-teal_background toggle"><li><details open=""><summary><strong>Data processing/analysis of STEM-derived multi-dimensional data</strong></summary><ul id="28c58db2-ee70-4051-810c-d7c89407a35c" class="bulleted-list"><li style="list-style-type:disc">Electron tomography (feature extraction/tomographic reconstruction)</li></ul><ul id="85703c76-8387-4b50-9ed9-da7e4f4eb071" class="bulleted-list"><li style="list-style-type:disc">4D-STEM data processing/analysis</li></ul></details></li></ul></div><hr id="23473f8c-37ff-406a-8266-d7d5cdb68654"/><h2 id="c2cdd363-17aa-4d06-a9f5-26b634226d9d" class="">🔰Research Interests</h2><h3 id="40d4a5c8-07f2-48be-83cc-a7b448e06f3c" class="">● <strong>Data Science for Microscopy Analysis</strong></h3><ul id="35339baf-3b44-47ef-a521-2ac8971b4933" class="bulleted-list"><li style="list-style-type:disc">Machine learning application to microscopic analysis</li></ul><h3 id="0244de3c-f12b-4bfe-b506-613d2138bc07" class="">● <strong>Development of Computational Methods for Post-processing of Microscopy Data</strong></h3><ul id="5a3bf8bd-d299-4d1d-9ff7-e4e4460f0070" class="bulleted-list"><li style="list-style-type:disc">Enhancement of SNR for low-dose experiments</li></ul><ul id="36321945-6b30-482e-99e2-cd3fee53ba5e" class="bulleted-list"><li style="list-style-type:disc">Correction of scanning artifacts</li></ul><h3 id="7b655900-6543-44d1-a972-e62ca0853160" class="">● <strong>Investigation of 3D/4D Structure-Property Relationships of Materials through Multi-dimensional STEM Techniques</strong></h3><hr id="11fbf1f9-ed64-4149-a2ed-054973a4ccb2"/><h2 id="7e287da5-d249-4836-8e82-31441c682704" class="">🔰Publication &amp; Award</h2><p id="62fdfdb8-226a-4be6-9d03-9e89e72bcde7" class="">▪ <strong>Ryu, J.</strong>, S. Lee, S. Kim, Y.-C. Joo, M. Kim*, <a href="https://doi.org/10.1063/5.0100925">“Correlative study between the local atomic and electronic structures of amorphous carbon materials via 4D-STEM and STEM-EELS”</a>, <em>Applied Physics Letters, 121, 042101 </em>(2022)</p><p id="dce0e6b7-5bea-4460-97a1-6b7215655e93" class="">▪ <strong>Ryu, J.</strong>, H. Kim, R. M. Kim, S. Kim, J. Jo, S. Lee, K. T. Nam, Y.-C. Joo, G.-C. Yi, J. Lee, M. Kim*, <a href="https://doi.org/10.1016/j.ultramic.2021.113314">“Dimensionality reduction and unsupervised clustering for EELS-SI”</a>, <em>Ultramicroscopy, 231, 113314 </em>(2021)</p><p id="830b7e86-9416-4d8d-a109-a1689a12cfc6" class="">▪ Yoon, S., H. Seo, K. Jin, H. G. Kim, S.-Y. Lee, J. Jo, K. H. Cho, <strong>J. Ryu</strong>, A. Yoon, Y.-W. Kim, J.-M. Zuo, Y.-K. Kwon, K. T. Nam, M. Kim*, <a href="https://doi.org/10.1021/acs.jpclett.2c01638">“Atomic reconstruction and Oxygen Evolution Reaction of Mn₃O₄ nanoparticles”</a>, <em>The Journal of Physical Chemistry, 13,  8336-8343 (2022)</em></p><p id="c02e1cff-e767-4d8f-a91d-80d3724d554a" class="">▪ Oh, J., S.-Y. Lee, H. Kim,  <strong>J. Ryu</strong>, B. Gil, J. Lee,  M. Kim*, <a href="https://doi.org/10.1002/advs.202203639">“Overcharge-induced Phase Heterogeneity and Resultant Twin-like (0003) Layer Deformation in Lithium Cobalt Oxide Cathode for Lithium-ion Batteries”</a>, <em>Advanced Science, 9, 32, 2203639 (2022)</em></p><p id="5488dff4-7835-4528-9da9-35c103c4296d" class="">▪ (<em>under revision</em>) Park, S., T. Jang, S. Choi, Y. H. Lee, K. H. Cho, M. Y. Lee, H. Seo, H.-K. Lim, Y. Kim, <strong>J. Ryu</strong>, S. W. Im, M. Kim, G.-S. Park, M. Kim, K. Jin, S. H. Kim, H. Kim, K. T. Nam*, “Symmetry-Broken Manganese Oxide Nanocatalyst for Water Oxidation”, <em>Nature Materials</em></p><p id="648f81a1-2c2a-4d67-a6d7-b1ddc933ea6d" class="">▪ Excellence Prize, <em>Best Paper Award</em>, Seoul National University &amp; Samsung Electronics R&amp;DB Foundation (2021)</p><hr id="45ea5de3-1cbd-40fe-8df6-349e671428b4"/><p id="080ac724-be32-48e4-9763-c944f4e265a9" class="">
+</p></div></article></body></html>
