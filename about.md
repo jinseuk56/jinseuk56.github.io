@@ -1,11 +1,9 @@
 ---
 layout: article
-title: RYU, JINSEOK, Ph.D.
+title: Ryu, Jinseok
 key: page-about
 ---
 
-  
-**Name :** Ryu, Jinseok  
 **E-mail :** jinseuk56@gmail.com  
 **ORCID :** [0000-0002-9558-3469](https://orcid.org/0000-0002-9558-3469)  
 **GitHub Repository :**  [https://github.com/jinseuk56](https://github.com/jinseuk56)  
