@@ -1,6 +1,6 @@
 
 .card {
-  max-width: 81rem;
+  max-width: 60rem;
   border-radius: map-get($base, border-radius);
   @include box-shadow();
   @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
