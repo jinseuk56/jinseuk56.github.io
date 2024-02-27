@@ -26,7 +26,7 @@ titles:
 key: page-about
 ---
 
-# CV
+About me.
 
 ## RYU, JINSEOK, Ph.D.
 
