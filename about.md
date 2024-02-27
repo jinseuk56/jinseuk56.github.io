@@ -26,6 +26,7 @@ titles:
 key: page-about
 ---
 
+  
 ## RYU, JINSEOK, Ph.D.
 
 **E-mail :** jinseuk56@gmail.com  
