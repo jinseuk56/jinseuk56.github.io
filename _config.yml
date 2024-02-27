@@ -16,13 +16,13 @@
 
 ## => Site Settings
 ##############################
-text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: "tomorrow-night" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : jinseuk56.github.io
 baseurl : # does not include hostname
-title   : Your Site Title
+title   : SOSO_DAD
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  Tiny records
 
 
 ## => Language and Timezone
