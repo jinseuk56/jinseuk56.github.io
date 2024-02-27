@@ -26,14 +26,14 @@ titles:
 key: page-about
 ---
 
-# RYU, JINSEOK
+# CV
+
+## RYU, JINSEOK, Ph.D.
 
 **E-mail :** jinseuk56@gmail.com  
 **ORCID :** [0000-0002-9558-3469](https://orcid.org/0000-0002-9558-3469)  
 **GitHub Repository :**  [https://github.com/jinseuk56](https://github.com/jinseuk56)  
 **Address :** Unit 517, Bldg. 30, Seoul National University, Gwanak-ro 1, Gwanak-gu, Seoul, 08826, South Korea
-
----
 
 ## 🔰Education
 
@@ -45,14 +45,10 @@ key: page-about
 *Materials Science and Engineering, Seoul National University, South Korea*   
 *2009.03-2015.08*
 
----
-
 ## 🔰Research Experience
 
 ### Postdoctoral Researcher (2022.09-Present)  
 *Research Institute of Advanced Materials, Seoul National University, South Korea*
-
----
 
 ## 🔰Teaching Experience
 
@@ -70,18 +66,14 @@ key: page-about
 - **Lecture Title:** Fundamentals of Computer Science (Department of Materials Science and Engineering)
 - Delivered a lecture about the basics of Python programming to freshmen
 
----
-
 ## 🔰Industry Experience
 
 ### Semiconductor Engineer (2015.07-2016.07)  
 *SK Hynix (2091, Gyeongchung-daero, Bubal-eup, Icheon-si, Gyeonggi-do, South Korea)*  
 *Process integration and wafer-level reliability test for NAND flash memory*
 
----
-
 ## 🔰Skills
-### (S)**TEM Experiment/Analysis**
+### **(S)TEM Experiment/Analysis**
 - **Themis Z, Tecnai F20** (*Thermo Fisher Scientific*), **JEM-2100F** (*Jeol*)
 - **Imaging** (*TEM/STEM/4D-STEM*) & **analytical techniques** (*EELS/EDS*)
 - **Analysis of structure-property relationship**
@@ -99,8 +91,6 @@ key: page-about
     - *Electron tomography (feature extraction/tomographic reconstruction)*
     - *4D-STEM data processing/analysis*
 
----
-
 ## 🔰Research Interests
 
 ### Data Science for Microscopy Analysis
@@ -110,8 +100,6 @@ key: page-about
 - *Correction of scanning artifacts*
 ### Investigation of 3D Structure-Property Relationships of Materials through Multi-dimensional STEM Techniques
 
----
-
 ## 🔰Publication
 
 ### First Author 
@@ -119,6 +107,7 @@ key: page-about
 - **Ryu, J.**†, S. Lee†, S. Kim, Y.-C. Joo, M. Kim*, [“Correlative study between the local atomic and electronic structures of amorphous carbon materials via 4D-STEM and STEM-EELS”](https://doi.org/10.1063/5.0100925), *Applied Physics Letters, 121, 042101* (2022)
 - **Ryu, J.**, H. Kim, R. M. Kim, S. Kim, J. Jo, S. Lee, K. T. Nam, Y.-C. Joo, G.-C. Yi, J. Lee, M. Kim*, [“Dimensionality reduction and unsupervised clustering for EELS-SI”](https://doi.org/10.1016/j.ultramic.2021.113314), *Ultramicroscopy, 231, 113314* (2021)
 - *(Submitted)*  Jo†, J., **J. Ryu**†,  J.-H. Huh, H. Kim, D. H. Seo, J. Lee, M. Kwon, S. Lee*, K. T. Nam*, M. Kim*. “Direct three-dimensional observation of plasmonic near-fields in a nanoparticle with circular dichroism”
+
 ### Contributed Paper
 - Park, S., T. Jang, S. Choi, Y. H. Lee, K. H. Cho, M. Y. Lee, H. Seo, H.-K. Lim, Y. Kim, **J. Ryu**, S. W. Im, M. Kim, G.-S. Park, M. Kim, K. Jin, S. H. Kim, H. Kim, K. T. Nam*, [“Iridium-Cooperated, Symmetry-Broken Manganese Oxide Nanocatalyst for Water Oxidation”](https://pubs.acs.org/doi/abs/10.1021/jacs.3c07411), *Journal of the American Chemical Society, 145, 49, 26632–26644* (2023)
     - ***Contribution***: Completed phase identification and quantitative chemical analysis of manganese oxide nanoparticles via electron diffraction and electron energy loss spectroscopy
@@ -128,8 +117,6 @@ key: page-about
     - ***Contribution***: Achieved noise reduction of EELS spectra using a dimensionality reduction method
 - Yoon, S., H. Seo, K. Jin, H. G. Kim, S.-Y. Lee, J. Jo, K. H. Cho, **J. Ryu**, A. Yoon, Y.-W. Kim, J.-M. Zuo, Y.-K. Kwon, K. T. Nam, M. Kim*, [“Atomic reconstruction and Oxygen Evolution Reaction of Mn₃O₄ nanoparticles”](https://doi.org/10.1021/acs.jpclett.2c01638), *The Journal of Physical Chemistry, 13,  8336-8343* (2022)
     - ***Contribution***: Created a program code for feature extraction from 4D-STEM data using a dimensionality reduction method
-
----
 
 ## 🔰Conference & Award
 
