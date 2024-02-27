@@ -1,9 +1,9 @@
 header:
-  - titles: About
+  - title: About
     url: /about.html
-  - titles: Post
+  - title: Post
     url: /_posts/
-  - titles: Archive
+  - title: Archive
     url: /archive.html
 
 
