@@ -3,8 +3,6 @@ header:
     url: /
   - title: About
     url: /about.html
-  - title: Post
-    url: /_posts
   - title: Archive
     url: /archive.html
 
