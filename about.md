@@ -7,7 +7,6 @@ key: page-about
 **E-mail :** jinseuk56@gmail.com  
 **ORCID :** [0000-0002-9558-3469](https://orcid.org/0000-0002-9558-3469)  
 **GitHub Repository :**  [https://github.com/jinseuk56](https://github.com/jinseuk56)  
-**Address :** Unit 517, Bldg. 30, Seoul National University, Gwanak-ro 1, Gwanak-gu, Seoul, 08826, South Korea
 
 ## 🔰Education
 
@@ -29,7 +28,7 @@ key: page-about
 #### Workshop | Lecturer | Jul. 20. 2023 | Korean Society of Microscopy
 - 28th TEM Workshop, Jul. 18. 2023–Jul. 21. 2023, Korean Society of Microscopy
 - **Lecture Title:** Machine learning in TEM analysis: Basics and Applications
-- Delivered a lecture about applications of machine learning to TEM analysis
+- Delivered a lecture about applications of machine learning to TEM analysis  
 
 #### Workshop | Lecturer | Jul. 28. 2022–Jul. 29. 2022 | Korean Society of Microscopy
 - 27th TEM Workshop, Jul. 26. 2022–Jul. 29. 2022, Korean Society of Microscopy
@@ -69,9 +68,11 @@ key: page-about
 
 #### Data Science for Microscopy Analysis
 - *Machine learning application to microscopic analysis*
+
 #### Development of Computational Methods for Post-processing of Microscopy Data
 - *Enhancement of SNR for low-dose experiments*
 - *Correction of scanning artifacts*
+
 #### Investigation of 3D Structure-Property Relationships of Materials through Multi-dimensional STEM Techniques
 
 ## 🔰Publication
