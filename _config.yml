@@ -20,9 +20,9 @@ text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate",
 highlight_theme: "tomorrow-night" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : jinseuk56.github.io
 baseurl : # does not include hostname
-title   : "SOSODAD - tiny records."
+title   : "SOSODAD"
 description: > # this means to ignore newlines until "nav_lists:"
-  Live well.
+  Just live and let live.
 
 
 ## => Language and Timezone
