@@ -1,8 +1,10 @@
 header:
+  - title: Home
+    url: /
   - title: About
     url: /about.html
   - title: Post
-    url: /_posts/
+    url: /_posts
   - title: Archive
     url: /archive.html
 
