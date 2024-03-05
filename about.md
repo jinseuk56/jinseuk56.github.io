@@ -70,14 +70,14 @@ key: page-about
 
 ## 🔰Research Interests
 
-#### Data Science for Microscopy Analysis
+**Data Science for Microscopy Analysis**
 - *Machine learning application to microscopic analysis*
 
-#### Development of Computational Methods for Post-processing of Microscopy Data
+**Development of Computational Methods for Post-processing of Microscopy Data**
 - *Enhancement of SNR for low-dose experiments*
 - *Correction of scanning artifacts*
 
-#### Investigation of 3D Structure-Property Relationships of Materials through Multi-dimensional STEM Techniques
+**Investigation of 3D Structure-Property Relationships of Materials through Multi-dimensional STEM Techniques**
 
 ## 🔰Publication
 
