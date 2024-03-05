@@ -4,7 +4,7 @@ title: Ryu, Jinseok
 key: page-about
 ---
 
-**E-mail :** jinseuk56@gmail.com  
+**E-mail :** jinseok.ryu@diamond.ac.uk  
 **ORCID :** [0000-0002-9558-3469](https://orcid.org/0000-0002-9558-3469)  
 **GitHub Repository :**  [https://github.com/jinseuk56](https://github.com/jinseuk56)  
 
@@ -20,7 +20,11 @@ key: page-about
 
 ## 🔰Research Experience
 
-#### Postdoctoral Researcher (2022.09-Present)  
+**Postdoctoral Research Associate (2024.03-Present)**  
+*PDRA of  InFUSE*  
+*ePSIC, Diamond Light Source, United Kingdom*
+
+**Postdoctoral Research Associate (2022.09-2024.02)**  
 *Research Institute of Advanced Materials, Seoul National University, South Korea*
 
 ## 🔰Teaching Experience
