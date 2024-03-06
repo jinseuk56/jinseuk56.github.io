@@ -10,11 +10,12 @@ key: page-about
 
 ## 🔰Education
 
-#### Ph.D.
+**Ph.D.**  
 *Materials Science and Engineering, Seoul National University, South Korea*   
 *2017.03-2022.08 Combined MS/PhD*  
-*(Advisor: Prof. Miyoung Kim)*  
-#### B.S.
+*(Advisor: Prof. Miyoung Kim)*
+  
+**B.S.**
 *Materials Science and Engineering, Seoul National University, South Korea*   
 *2009.03-2015.08*
 
@@ -29,23 +30,23 @@ key: page-about
 
 ## 🔰Teaching Experience
 
-#### Workshop | Lecturer | Jul. 20. 2023 | Korean Society of Microscopy
+**Workshop | Lecturer | Jul. 20. 2023 | Korean Society of Microscopy**
 - 28th TEM Workshop, Jul. 18. 2023–Jul. 21. 2023, Korean Society of Microscopy
 - **Lecture Title:** Machine learning in TEM analysis: Basics and Applications
 - Delivered a lecture about applications of machine learning to TEM analysis  
 
-#### Workshop | Lecturer | Jul. 28. 2022–Jul. 29. 2022 | Korean Society of Microscopy
+**Workshop | Lecturer | Jul. 28. 2022–Jul. 29. 2022 | Korean Society of Microscopy**
 - 27th TEM Workshop, Jul. 26. 2022–Jul. 29. 2022, Korean Society of Microscopy
 - **Lecture Title:** STEM-derived multi-dimensional data processing in Python-integrated GMS 3
 - Delivered a lecture and a practical session about data processing and analysis of multi-dimensional STEM data
 
-#### Lecture | Lecturer | 2020 Fall Semester | Seoul National University
+**Lecture | Lecturer | 2020 Fall Semester | Seoul National University**
 - **Lecture Title:** Fundamentals of Computer Science (Department of Materials Science and Engineering)
 - Delivered a lecture about the basics of Python programming to freshmen
 
 ## 🔰Industry Experience
 
-#### Semiconductor Engineer (2015.07-2016.07)  
+**Semiconductor Engineer (2015.07-2016.07)**  
 *SK Hynix (2091, Gyeongchung-daero, Bubal-eup, Icheon-si, Gyeonggi-do, South Korea)*  
 *Process integration and wafer-level reliability test for NAND flash memory*
 
