@@ -23,10 +23,10 @@ key: page-about
 
 **Postdoctoral Research Associate (2024.03-Present)**  
 *PDRA of  InFUSE*  
-*ePSIC, Diamond Light Source, United Kingdom*
+*ePSIC, Diamond Light Source, Harwell Campus, Didcot, United Kingdom*
 
 **Postdoctoral Research Associate (2022.09-2024.02)**  
-*Research Institute of Advanced Materials, Seoul National University, South Korea*
+*Research Institute of Advanced Materials, Seoul National University, Seoul, South Korea*
 
 ## 🔰Teaching Experience
 
