@@ -15,7 +15,7 @@ key: page-about
 *2017.03-2022.08 Combined MS/PhD*  
 *(Advisor: Prof. Miyoung Kim)*
   
-**B.S.**
+**B.S.**  
 *Materials Science and Engineering, Seoul National University, South Korea*   
 *2009.03-2015.08*
 
