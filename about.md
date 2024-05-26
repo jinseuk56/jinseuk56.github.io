@@ -101,7 +101,7 @@ key: page-about
 ## 🔰Conference & Award
 
 - (*Oral Presentation*) **Ryu, J.**, J. Jo, H. Kim, K. T. Nam, M. Kim\*, “GPU-based fast reconstruction and DL-based feature extraction for EELS tomography”, *The 20th International Microscopy Congress*, Busan, South Korea (2023)
-- (*Invited talk*) **Ryu, J.** (*on behalf of Prof. Miyoung Kim*),  G. Kim, S. Lee, M. Kim*, “Exploring ionic migration and structural evolution in dielectric devices”, *The 20th International Microscopy Congress*, Busan, South Korea (2023)
+- (*Invited talk*) **Ryu, J.** (*on behalf of Prof. Miyoung Kim*),  G. Kim, S. Lee, M. Kim\*, “Exploring ionic migration and structural evolution in dielectric devices”, *The 20th International Microscopy Congress*, Busan, South Korea (2023)
 - (*Oral Presentation*) **Ryu, J.**,  Lee, S. Kim, Y.-C. Joo, M. Kim\*, “A comprehensive nanoscale characterization of amorphous carbon films through STEM-EELS and 4D-STEM”, *The 20th International Microscopy Congress*, Busan, South Korea (2023)
 - (*Invited talk*) **Ryu, J.**,  J. Jo, S. Lee, M. Kim, “Unsupervised learning strategies for extracting features from STEM-derived multi-dimensional data”, *2023 Korea Society of Microscopy Spring Conference*, (2023), Daejeon, South Korea
 - (*Poster presentation*) **Ryu, J.**,  S. Lee, S. Kim, I. Yoo, Y.-C. Joo, M. Kim\*, “A machine-learning approach to characterization of amorphous materials with EELS-SI and 4D-STEM”, *2022 Materials Research Society Spring Meeting*,  Hawaii, United States (2022)
