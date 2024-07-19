@@ -22,7 +22,7 @@ order: 4
 ## 🔰Research Experience
 
 **Postdoctoral Research Associate (2024.03-Present)**  
-*PDRA funded by the InFUSE Prosperity partnership*  
+*Funded by the InFUSE Prosperity partnership*  
 *electron Physical Science Imaging Centre (ePSIC)*  
 *Diamond Light Source, Harwell Campus, Didcot, United Kingdom*
 
