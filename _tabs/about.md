@@ -22,8 +22,9 @@ order: 4
 ## 🔰Research Experience
 
 **Postdoctoral Research Associate (2024.03-Present)**  
-*PDRA of  InFUSE*  
-*ePSIC, Diamond Light Source, Harwell Campus, Didcot, United Kingdom*
+*PDRA funded by the InFUSE Prosperity partnership*  
+*electron Physical Science Imaging Centre (ePSIC)*  
+*Diamond Light Source, Harwell Campus, Didcot, United Kingdom*
 
 **Postdoctoral Research Associate (2022.09-2024.02)**  
 *Research Institute of Advanced Materials, Seoul National University, Seoul, South Korea*
@@ -103,7 +104,7 @@ order: 4
 - (*Oral Presentation*) **Ryu, J.**, J. Jo, H. Kim, K. T. Nam, M. Kim\*, “GPU-based fast reconstruction and DL-based feature extraction for EELS tomography”, *The 20th International Microscopy Congress*, Busan, South Korea (2023)
 - (*Invited talk*) **Ryu, J.** (*on behalf of Prof. Miyoung Kim*),  G. Kim, S. Lee, M. Kim\*, “Exploring ionic migration and structural evolution in dielectric devices”, *The 20th International Microscopy Congress*, Busan, South Korea (2023)
 - (*Oral Presentation*) **Ryu, J.**,  Lee, S. Kim, Y.-C. Joo, M. Kim\*, “A comprehensive nanoscale characterization of amorphous carbon films through STEM-EELS and 4D-STEM”, *The 20th International Microscopy Congress*, Busan, South Korea (2023)
-- (*Invited talk*) **Ryu, J.**,  J. Jo, S. Lee, M. Kim, “Unsupervised learning strategies for extracting features from STEM-derived multi-dimensional data”, *2023 Korea Society of Microscopy Spring Conference*, (2023), Daejeon, South Korea
+- (*Invited talk*) **Ryu, J.**,  J. Jo, S. Lee, M. Kim, “Unsupervised learning strategies for extracting features from STEM-derived multi-dimensional data”, *2023 Korea Society of Microscopy Spring Conference*, Daejeon, South Korea (2023)
 - (*Poster presentation*) **Ryu, J.**,  S. Lee, S. Kim, I. Yoo, Y.-C. Joo, M. Kim\*, “A machine-learning approach to characterization of amorphous materials with EELS-SI and 4D-STEM”, *2022 Materials Research Society Spring Meeting*,  Hawaii, United States (2022)
 - (*Poster presentation*) Jo, J., K. MacArthur,  **J. Ryu**, H. Kim, S. Collins, K. Müller-Caspary, K. Nam, M. Kim, R. E. Dunin-Borkowski\*, “Three-dimensional characterization of nanoparticles with simultaneously acquired bright-field, dark-field, and secondary electron signals in STEM”, *PICO 2021, Virtual Meeting* (2021)
 - (*Oral presentation*) **Ryu, J.**,  Jo, J. Lee, M. Kim\*, “Feature extraction and reconstruction of electron energy loss spectroscopy by non-negative matrix factorization”, *Asia Pacific Microscopy Congress 12*, Hyderabad, India (2020)
