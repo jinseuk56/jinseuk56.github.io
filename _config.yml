@@ -16,7 +16,7 @@ timezone: Europe/London
 
 title: SOSODAD # the main title
 
-tagline: Ryu, J. S. # it will display as the sub-title
+tagline: Ryu, J. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Just live and let live.
