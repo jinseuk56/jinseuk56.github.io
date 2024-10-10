@@ -87,17 +87,13 @@ order: 4
 (†: authors who equally contributed, \*: corresponding author)  
 - **Ryu, J.**†, S. Lee†, S. Kim, Y.-C. Joo, M. Kim\*, [“Correlative study between the local atomic and electronic structures of amorphous carbon materials via 4D-STEM and STEM-EELS”](https://doi.org/10.1063/5.0100925), *Applied Physics Letters, 121, 042101* (2022)
 - **Ryu, J.**, H. Kim, R. M. Kim, S. Kim, J. Jo, S. Lee, K. T. Nam, Y.-C. Joo, G.-C. Yi, J. Lee, M. Kim\*, [“Dimensionality reduction and unsupervised clustering for EELS-SI”](https://doi.org/10.1016/j.ultramic.2021.113314), *Ultramicroscopy, 231, 113314* (2021)
-- *(Submitted)*  Jo†, J., **J. Ryu**†,  J.-H. Huh, H. Kim, D. H. Seo, J. Lee, M. Kwon, S. Lee\*, K. T. Nam\*, M. Kim\*. “Direct three-dimensional observation of plasmonic near-fields in a nanoparticle with circular dichroism”
+- *(Accepted)*  Jo†, J., **J. Ryu**†,  J.-H. Huh, H. Kim, D. H. Seo, J. Lee, M. Kwon, S. Lee\*, K. T. Nam\*, M. Kim\*. “Direct three-dimensional observation of the plasmonic near-fields of a nanoparticle with circular dichroism”, *ACS Nano* (2024)
 
 #### Contributed Paper
 - Park, S., T. Jang, S. Choi, Y. H. Lee, K. H. Cho, M. Y. Lee, H. Seo, H.-K. Lim, Y. Kim, **J. Ryu**, S. W. Im, M. Kim, G.-S. Park, M. Kim, K. Jin, S. H. Kim, H. Kim, K. T. Nam\*, [“Iridium-Cooperated, Symmetry-Broken Manganese Oxide Nanocatalyst for Water Oxidation”](https://pubs.acs.org/doi/abs/10.1021/jacs.3c07411), *Journal of the American Chemical Society, 145, 49, 26632–26644* (2023)
-    - ***Contribution***: Completed phase identification and quantitative chemical analysis of manganese oxide nanoparticles via electron diffraction and electron energy loss spectroscopy
 - Kim, S., U.-G. Kim, **J. Ryu**, D.-K. Kim, M. Kim, Y.-C. Joo\*, S.-Y. Lee\*, [“Boron-doped amorphous carbon deposited by DC sputtering for a hardmask: microstructure and dry etching properties”](https://www.sciencedirect.com/science/article/abs/pii/S016943322301574X), *Applied Surface Science, 637, 157895* (2023)
-    - ***Contribution***: Implemented EELS analysis of the near-edge structures of carbon and boron atoms
 - Oh, J., S.-Y. Lee, H. Kim,  **J. Ryu**, B. Gil, J. Lee,  M. Kim\*, [“Overcharge-induced Phase Heterogeneity and Resultant Twin-like (0003) Layer Deformation in Lithium Cobalt Oxide Cathode for Lithium-ion Batteries”](https://doi.org/10.1002/advs.202203639), *Advanced Science, 9, 32, 2203639* (2022)
-    - ***Contribution***: Achieved noise reduction of EELS spectra using a dimensionality reduction method
 - Yoon, S., H. Seo, K. Jin, H. G. Kim, S.-Y. Lee, J. Jo, K. H. Cho, **J. Ryu**, A. Yoon, Y.-W. Kim, J.-M. Zuo, Y.-K. Kwon, K. T. Nam, M. Kim\*, [“Atomic reconstruction and Oxygen Evolution Reaction of Mn₃O₄ nanoparticles”](https://doi.org/10.1021/acs.jpclett.2c01638), *The Journal of Physical Chemistry, 13,  8336-8343* (2022)
-    - ***Contribution***: Created a program code for feature extraction from 4D-STEM data using a dimensionality reduction method
 
 ## 🔰Conference & Award
 
