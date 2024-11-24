@@ -27,7 +27,9 @@ order: 4
 *Diamond Light Source, Harwell Campus, Didcot, United Kingdom*
 
 **Postdoctoral Research Associate (2022.09-2024.02)**  
-*Research Institute of Advanced Materials, Seoul National University, Seoul, South Korea*
+*Electron Microscopy and Spectroscopy Laboratory*
+*Research Institute of Advanced Materials*  
+*Seoul National University, Seoul, South Korea*
 
 ## 🔰Teaching Experience
 
@@ -86,6 +88,7 @@ order: 4
 ## 🔰Publication
 (†: first author or co-first authors, \*: corresponding author)
 - Jo, J.†, **J. Ryu**†,  J.-H. Huh, H. Kim, D. H. Seo, J. Lee, M. Kwon, S. Lee\*, K. T. Nam\*, M. Kim\*. [“Direct three-dimensional observation of the plasmonic near-fields of a nanoparticle with circular dichroism”](https://doi.org/10.1021/acsnano.4c10677), *ACS Nano* (2024)
+- Kim, I.†, **J. Ryu**, E. Lee, S. Lee, S. Lee, W. Suh, J. Lee, M. Kim, H. S. Oh, G.-C. Yi\*. ["Molecular beam epitaxial In2Te3 electronic devices."](https://doi.org/10.1038/s41427-024-00578-0), *NPG Asia Materials*, 16, 1, 59 (2024)
 - Hein, P.†, T. Romstadt, F. Draber, **J. Ryu**, T. Boger, A. Falkenstein, M. Kim, M. Martin\*, [“Variable-Range Hopping Conduction in Amorphous, Non-Stoichiometric Gallium Oxide”](https://doi.org/10.1002/aelm.202400407), *Advanced Electronic Materials* (2024) 
 - Park, S.†, T. Jang†, S. Choi†, Y. H. Lee, K. H. Cho, M. Y. Lee, H. Seo, H.-K. Lim, Y. Kim, **J. Ryu**, S. W. Im, M. Kim, G.-S. Park, M. Kim, K. Jin, S. H. Kim, H. Kim, K. T. Nam\*, [“Iridium-Cooperated, Symmetry-Broken Manganese Oxide Nanocatalyst for Water Oxidation”](https://doi.org/10.1021/jacs.3c07411), *Journal of the American Chemical Society*, 145, 49, 26632–26644 (2023)
 - Kim, S.†, U.-G. Kim, **J. Ryu**, D.-K. Kim, M. Kim, Y.-C. Joo\*, S.-Y. Lee\*, [“Boron-doped amorphous carbon deposited by DC sputtering for a hardmask: microstructure and dry etching properties”](https://doi.org/10.1016/j.apsusc.2023.157895), *Applied Surface Science*, 637, 157895 (2023)
