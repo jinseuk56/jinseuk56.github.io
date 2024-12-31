@@ -60,7 +60,7 @@ order: 4
     - *Tomographic reconstruction & visualization*
 
 #### **Development of Computational Tools for (S)TEM Analysis**
-- **Programming** (*Python/DigitalMicrograph*) **for (S)TEM analysis**
+- **Programming** (*Python*) **for (S)TEM analysis**
 - **Application of machine learning algorithms to (S)TEM data analysis**
     - *Extraction of fundamental/hidden features from microscopy datasets*
     - *Deep learning, dimensionality reduction, cluster analysis, and their combinations*
@@ -84,7 +84,7 @@ order: 4
 
 ## 🔰Publication
 (†: first author or co-first authors, \*: corresponding author)
-- Jo, J.†, **J. Ryu**†,  J.-H. Huh, H. Kim, D. H. Seo, J. Lee, M. Kwon, S. Lee\*, K. T. Nam\*, M. Kim\*. [“Direct three-dimensional observation of the plasmonic near-fields of a nanoparticle with circular dichroism”](https://doi.org/10.1021/acsnano.4c10677), *ACS Nano* (2024)
+- Jo, J.†, **J. Ryu**†,  J.-H. Huh, H. Kim, D. H. Seo, J. Lee, M. Kwon, S. Lee\*, K. T. Nam\*, M. Kim\*. [“Direct three-dimensional observation of the plasmonic near-fields of a nanoparticle with circular dichroism”](https://doi.org/10.1021/acsnano.4c10677), *ACS Nano*, 18, 47 (2024)
 - Kim, I.†, **J. Ryu**, E. Lee, S. Lee, S. Lee, W. Suh, J. Lee, M. Kim, H. S. Oh, G.-C. Yi\*. ["Molecular beam epitaxial In2Te3 electronic devices."](https://doi.org/10.1038/s41427-024-00578-0), *NPG Asia Materials*, 16, 1, 59 (2024)
 - Hein, P.†, T. Romstadt, F. Draber, **J. Ryu**, T. Boger, A. Falkenstein, M. Kim, M. Martin\*, [“Variable-Range Hopping Conduction in Amorphous, Non-Stoichiometric Gallium Oxide”](https://doi.org/10.1002/aelm.202400407), *Advanced Electronic Materials* (2024) 
 - Park, S.†, T. Jang†, S. Choi†, Y. H. Lee, K. H. Cho, M. Y. Lee, H. Seo, H.-K. Lim, Y. Kim, **J. Ryu**, S. W. Im, M. Kim, G.-S. Park, M. Kim, K. Jin, S. H. Kim, H. Kim, K. T. Nam\*, [“Iridium-Cooperated, Symmetry-Broken Manganese Oxide Nanocatalyst for Water Oxidation”](https://doi.org/10.1021/jacs.3c07411), *Journal of the American Chemical Society*, 145, 49, 26632–26644 (2023)
@@ -96,6 +96,7 @@ order: 4
 
 ## 🔰Conference & Award
 (†: presenter, \*: corresponding author)
+- (*Oral Presentation*) Lee, S.†, **J. Ryu**, H. Philipp, M. Martin, M. Kim\*, "In-Situ Biasing TEM Analysis of Resistive Switching in Amorphous GaOx for Next-Generation Memory Applications", *2024 Materials Research Society Fall Meeting*,  Boston, Massachusetts, United States (2022)
 - (*Oral Presentation*) Chang, Y.†, **J. Ryu**, H. Yoo, H. N. Han, M. Kim\*, ["Ptychography Optimization for Atomic Analysis of Bending Mode in Bilayer Transition Metal Dichalcogenide Translational Motion"](https://doi.org/10.1051/bioconf/202412922029), *The 17th European Microscopy Congress*, Copenhagen, Denmark (2024)
 - (*Oral Presentation*) **Ryu, J.**†, J. Jo, H. Kim, K. T. Nam, M. Kim\*, “GPU-based fast reconstruction and DL-based feature extraction for EELS tomography”, *The 20th International Microscopy Congress*, Busan, South Korea (2023)
 - (*Invited talk*) **Ryu, J.**† (*on behalf of Prof. Miyoung Kim*),  G. Kim, S. Lee, M. Kim\*, “Exploring ionic migration and structural evolution in dielectric devices”, *The 20th International Microscopy Congress*, Busan, South Korea (2023)
