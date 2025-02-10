@@ -3,19 +3,19 @@
 icon: fas fa-info-circle
 order: 4
 ---
-
+## 👨‍🔬Jinseok Ryu, PhD
 **E-mail :** jinseuk56@gmail.com  
 **ORCID :** [0000-0002-9558-3469](https://orcid.org/0000-0002-9558-3469)  
 **GitHub Repository :**  [https://github.com/jinseuk56](https://github.com/jinseuk56)  
 
 ## 🔰Education
 
-**Ph.D.**  
+**PhD**  
 *Materials Science and Engineering, Seoul National University, South Korea*   
 *2017.03-2022.08 Combined MS/PhD*  
 *(Advisor: Prof. Miyoung Kim)*
   
-**B.S.**  
+**BS**  
 *Materials Science and Engineering, Seoul National University, South Korea*   
 *2009.03-2015.08*
 
