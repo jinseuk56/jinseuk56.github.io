@@ -1,0 +1,118 @@
+/* ============================================================
+   Photo Tile Gallery — TAGS page
+   ============================================================ */
+
+/* Section wrapper */
+.photo-tile-section {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
+}
+
+/* Section heading */
+.photo-tile-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--heading-color, inherit);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.photo-tile-title i {
+  opacity: 0.75;
+}
+
+/* 10-column grid */
+.photo-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3px;
+}
+
+/* Individual tile cell */
+.photo-tile-item {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 2px;
+  text-decoration: none !important;
+  background-color: var(--card-bg, #1e1e2e);
+}
+
+/* Image itself */
+.photo-tile-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  /* Override any Chirpy theme max-width constraints */
+  max-width: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+/* Hover: zoom image */
+.photo-tile-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay: appears on hover */
+.photo-tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: flex-end;
+  padding: 4px 5px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.photo-tile-item:hover .photo-tile-overlay {
+  opacity: 1;
+}
+
+.photo-tile-overlay-text {
+  font-size: 0.55rem;
+  color: #fff;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* ============================================================
+   Responsive breakpoints
+   ============================================================ */
+
+/* Large tablets → 7 columns */
+@media (max-width: 1199px) {
+  .photo-tile-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+/* Tablets → 5 columns */
+@media (max-width: 768px) {
+  .photo-tile-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .photo-tile-overlay-text {
+    font-size: 0.5rem;
+  }
+}
+
+/* Mobile → 3 columns */
+@media (max-width: 480px) {
+  .photo-tile-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

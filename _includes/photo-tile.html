@@ -1,0 +1,48 @@
+{% comment %}
+  Photo Tile: Collects all images from all posts and renders a 10-column grid.
+  Each image links to the post it was found in.
+{% endcomment %}
+
+<section class="photo-tile-section">
+  <h2 class="photo-tile-title">
+    <i class="fas fa-images"></i> Photo Gallery
+  </h2>
+
+  <div class="photo-tile-grid" id="photo-tile-grid">
+    {% for post in site.posts %}
+      {% assign post_content = post.content %}
+      {% assign post_url = post.url | relative_url %}
+      {% assign post_title = post.title %}
+
+      {% comment %} Split on "![" to find image blocks {% endcomment %}
+      {% assign segments = post_content | split: "!["  %}
+
+      {% for seg in segments %}
+        {% unless forloop.first %}
+          {% comment %} Extract URL between "](" and the closing ")" {% endcomment %}
+          {% assign after_alt = seg | split: "](" %}
+          {% if after_alt.size > 1 %}
+            {% assign url_and_rest = after_alt[1] | split: ")" %}
+            {% assign img_url = url_and_rest[0] %}
+
+            {% comment %} Only include OneDrive/external image URLs (skip empty or local paths) {% endcomment %}
+            {% if img_url contains "1drv.ms" %}
+              <a class="photo-tile-item"
+                 href="{{ post_url }}"
+                 title="{{ post_title }}"
+                 aria-label="{{ post_title }}">
+                <img src="{{ img_url }}"
+                     alt="{{ post_title }}"
+                     loading="lazy"
+                     decoding="async">
+                <span class="photo-tile-overlay">
+                  <span class="photo-tile-overlay-text">{{ post_title }}</span>
+                </span>
+              </a>
+            {% endif %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>

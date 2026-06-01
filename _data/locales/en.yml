@@ -1,0 +1,5 @@
+# Local locale override for jekyll-theme-chirpy
+# Overrides the sidebar tab label for the tags page.
+
+tabs:
+  tags: TAGS & Gallery
