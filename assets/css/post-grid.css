@@ -99,3 +99,20 @@
     flex: 1 1 100% !important; /* 1 column on mobile */
   }
 }
+
+/* ============================================================
+   GLightbox overrides (Fixes white background for portrait images)
+   ============================================================ */
+
+.glightbox-container .gslide-inner-content,
+.glightbox-container .gslide-media,
+.glightbox-container .gslide-image {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.glightbox-container .gslide-description {
+  background: var(--card-bg, #1e1e2e) !important;
+  color: var(--text-color, #cdd6f4) !important;
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.08)) !important;
+}
