@@ -2,4 +2,4 @@
 # Overrides the sidebar tab label for the tags page.
 
 tabs:
-  tags: TAGS & Gallery
+  tags: Tags & Gallery

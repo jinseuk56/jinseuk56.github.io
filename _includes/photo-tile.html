@@ -1,9 +1,7 @@
 {% comment %}
-  Photo Tile: Collects all images from all posts and renders a 10-column grid.
-  Each image links to the post it was found in.
-
-  Note: post.content is rendered HTML, so images are <img src="URL"> — not ![alt](URL).
-  We split on the literal string '<img src="' and grab everything before the next '"'.
+  Photo Tile: Renders a 10-column image grid from all posts.
+  Image data is collected at build time by _plugins/collect-post-images.rb,
+  which reads raw Markdown source files and stores results in site.data.post_images.
 {% endcomment %}
 
 <section class="photo-tile-section">
@@ -12,34 +10,23 @@
   </h2>
 
   <div class="photo-tile-grid" id="photo-tile-grid">
-    {% for post in site.posts %}
-      {% assign post_url = post.url | relative_url %}
-      {% assign post_title = post.title %}
+    {% for entry in site.data.post_images %}
+      {% assign post_url = entry.url | relative_url %}
+      {% assign post_title = entry.title %}
 
-      {% comment %} Split on the rendered HTML img tag opener {% endcomment %}
-      {% assign segments = post.content | split: '<img src="' %}
-
-      {% for seg in segments %}
-        {% unless forloop.first %}
-          {% comment %} The src URL is everything before the next double-quote {% endcomment %}
-          {% assign img_url = seg | split: '"' | first %}
-
-          {% comment %} Only include OneDrive image URLs {% endcomment %}
-          {% if img_url contains "1drv.ms" %}
-            <a class="photo-tile-item"
-               href="{{ post_url }}"
-               title="{{ post_title }}"
-               aria-label="{{ post_title }}">
-              <img src="{{ img_url }}"
-                   alt="{{ post_title }}"
-                   loading="lazy"
-                   decoding="async">
-              <span class="photo-tile-overlay">
-                <span class="photo-tile-overlay-text">{{ post_title }}</span>
-              </span>
-            </a>
-          {% endif %}
-        {% endunless %}
+      {% for img_url in entry.images %}
+        <a class="photo-tile-item"
+           href="{{ post_url }}"
+           title="{{ post_title }}"
+           aria-label="{{ post_title }}">
+          <img src="{{ img_url }}"
+               alt="{{ post_title }}"
+               loading="lazy"
+               decoding="async">
+          <span class="photo-tile-overlay">
+            <span class="photo-tile-overlay-text">{{ post_title }}</span>
+          </span>
+        </a>
       {% endfor %}
     {% endfor %}
   </div>
