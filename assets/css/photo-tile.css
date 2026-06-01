@@ -40,7 +40,27 @@
   overflow: hidden;
   border-radius: 2px;
   text-decoration: none !important;
-  background-color: var(--card-bg, #1e1e2e);
+  /* Shimmer skeleton shown while image loads */
+  background: linear-gradient(
+    90deg,
+    var(--card-bg, #1e1e2e) 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    var(--card-bg, #1e1e2e) 100%
+  );
+  background-size: 200% 100%;
+  animation: photo-tile-shimmer 1.4s infinite linear;
+}
+
+/* Stop shimmer once image is loaded */
+.photo-tile-item:has(img.loaded) {
+  animation: none;
+  background: none;
+}
+
+/* Shimmer animation */
+@keyframes photo-tile-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 /* Image itself */
@@ -49,15 +69,22 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
+  /* Start invisible; fade in after load */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   /* Override any Chirpy theme max-width constraints */
   max-width: none !important;
   border-radius: 0 !important;
   margin: 0 !important;
 }
 
+/* Fade in when loaded */
+.photo-tile-item img.loaded {
+  opacity: 1;
+}
+
 /* Hover: zoom image */
-.photo-tile-item:hover img {
+.photo-tile-item:hover img.loaded {
   transform: scale(1.08);
 }
 

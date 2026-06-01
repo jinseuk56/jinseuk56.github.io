@@ -2,6 +2,11 @@
   Photo Tile: Renders a 10-column image grid from all posts.
   Image data is collected at build time by _plugins/collect-post-images.rb,
   which reads raw Markdown source files and stores results in site.data.post_images.
+
+  Performance:
+  - Thumbnail URLs (300px) served via OneDrive resize params — ~10x smaller files
+  - IntersectionObserver: images load only when near the viewport
+  - CSS shimmer skeleton shown while loading; fade-in on load
 {% endcomment %}
 
 <section class="photo-tile-section">
@@ -19,9 +24,9 @@
            href="{{ post_url }}"
            title="{{ post_title }}"
            aria-label="{{ post_title }}">
-          <img src="{{ img_url }}"
+          <img data-src="{{ img_url }}"
+               src=""
                alt="{{ post_title }}"
-               loading="lazy"
                decoding="async">
           <span class="photo-tile-overlay">
             <span class="photo-tile-overlay-text">{{ post_title }}</span>
@@ -31,3 +36,43 @@
     {% endfor %}
   </div>
 </section>
+
+<script>
+(function () {
+  var grid = document.getElementById('photo-tile-grid');
+  if (!grid) return;
+
+  var imgs = grid.querySelectorAll('img[data-src]');
+
+  function loadImg(img) {
+    img.src = img.dataset.src;
+    img.removeAttribute('data-src');
+    img.addEventListener('load', function () {
+      img.classList.add('loaded');
+    }, { once: true });
+    // Handle broken / slow images gracefully
+    img.addEventListener('error', function () {
+      img.closest('.photo-tile-item').style.display = 'none';
+    }, { once: true });
+  }
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          loadImg(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '400px 0px',   // Pre-load 400px before entering viewport
+      threshold: 0
+    });
+
+    imgs.forEach(function (img) { observer.observe(img); });
+  } else {
+    // Fallback for browsers without IntersectionObserver
+    imgs.forEach(loadImg);
+  }
+})();
+</script>

@@ -7,6 +7,21 @@
 # the Chirpy theme's refactor-content.html transforms <img src="...">
 # to <img data-src="..."> for lazy loading, making HTML parsing unreliable.
 
+# Rewrite an OneDrive image URL to request a smaller thumbnail.
+# OneDrive supports ?height=N and ?width=N resize parameters.
+def photo_tile_thumbnail_url(url, size = 300)
+  if url =~ /[?&](height|width)=\d+/
+    # Replace existing height= or width= value
+    url.gsub(/([?&])(height|width)=\d+/, "\\1\\2=#{size}")
+  elsif url.include?('?')
+    # Append to existing query string
+    "#{url}&height=#{size}"
+  else
+    # No query string yet
+    "#{url}?height=#{size}"
+  end
+end
+
 Jekyll::Hooks.register :site, :post_read do |site|
   post_images = []
 
@@ -19,11 +34,12 @@ Jekyll::Hooks.register :site, :post_read do |site|
     next if urls.empty?
 
     post_images << {
-      'title' => post.data['title'].to_s,
-      'url'   => post.url,
-      'images' => urls
+      'title'  => post.data['title'].to_s,
+      'url'    => post.url,
+      'images' => urls.map { |u| photo_tile_thumbnail_url(u) }
     }
   end
 
   site.data['post_images'] = post_images
 end
+
