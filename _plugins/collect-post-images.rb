@@ -32,7 +32,12 @@ Jekyll::Hooks.register :site, :post_read do |site|
     raw = File.read(post.path, encoding: 'utf-8')
 
     # Match Markdown image syntax: ![alt](URL) optionally followed by {: .attr }
-    urls = raw.scan(/!\[.*?\]\((https?:\/\/[^\)\s]+)\)/).flatten
+    md_urls = raw.scan(/!\[.*?\]\((https?:\/\/[^\)\s]+)\)/).flatten
+
+    # Match HTML img src syntax (allowing spaces/tabs/newlines after img)
+    html_urls = raw.scan(/<img\s+[^>]*src=["'](https?:\/\/[^"'\s]+)["']/i).flatten
+
+    urls = md_urls + html_urls
 
     next if urls.empty?
 
