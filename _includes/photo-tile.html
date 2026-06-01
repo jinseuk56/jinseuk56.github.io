@@ -4,8 +4,8 @@
   which reads raw Markdown source files and stores results in site.data.post_images.
 
   Performance:
-  - Thumbnail URLs (300px) via OneDrive resize params — ~10x smaller than 660px post images
-  - IntersectionObserver: images load only when near the viewport
+  - Thumbnail URLs (150px) via OneDrive resize params — ~12x smaller than 660px post images (approx. 5.5KB each)
+  - Native loading="lazy": deferred loading managed robustly by the browser engine
   - CSS shimmer skeleton while loading; fade-in on load
 {% endcomment %}
 
@@ -24,10 +24,12 @@
            href="{{ post_url }}"
            title="{{ post_title }}"
            aria-label="{{ post_title }}">
-          <img data-src="{{ img_url }}"
-               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          <img src="{{ img_url }}"
                alt="{{ post_title }}"
-               decoding="async">
+               loading="lazy"
+               decoding="async"
+               onload="this.parentNode.classList.add('loaded')"
+               onerror="this.parentNode.style.display='none'">
           <span class="photo-tile-overlay">
             <span class="photo-tile-overlay-text">{{ post_title }}</span>
           </span>
@@ -36,51 +38,3 @@
     {% endfor %}
   </div>
 </section>
-
-<script>
-(function () {
-  var grid = document.getElementById('photo-tile-grid');
-  if (!grid) return;
-
-  var imgs = grid.querySelectorAll('img[data-src]');
-
-  function loadImg(img) {
-    // Attach listeners BEFORE setting src to avoid race condition
-    // where load fires before listener is registered (e.g. cached images).
-    img.addEventListener('load', function () {
-      img.classList.add('loaded');
-    }, { once: true });
-    img.addEventListener('error', function () {
-      var item = img.closest('.photo-tile-item');
-      if (item) item.style.display = 'none';
-    }, { once: true });
-
-    img.src = img.dataset.src;
-    img.removeAttribute('data-src');
-
-    // Fallback: if browser already had it cached, complete fires synchronously
-    // before our load listener above — handle it explicitly.
-    if (img.complete && img.naturalWidth > 0) {
-      img.classList.add('loaded');
-    }
-  }
-
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          loadImg(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      rootMargin: '400px 0px',
-      threshold: 0
-    });
-
-    imgs.forEach(function (img) { observer.observe(img); });
-  } else {
-    imgs.forEach(loadImg);
-  }
-})();
-</script>

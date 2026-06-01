@@ -9,7 +9,7 @@
 
 # Rewrite an OneDrive image URL to request a smaller thumbnail.
 # OneDrive supports ?height=N and ?width=N resize parameters.
-def photo_tile_thumbnail_url(url, size = 300)
+def photo_tile_thumbnail_url(url, size = 150)
   if url =~ /[?&](height|width)=\d+/
     # Replace existing height= or width= value
     url.gsub(/([?&])(height|width)=\d+/, "\\1\\2=#{size}")

@@ -51,8 +51,8 @@
   animation: photo-tile-shimmer 1.4s infinite linear;
 }
 
-/* Stop shimmer once image is loaded */
-.photo-tile-item:has(img.loaded) {
+/* Stop shimmer once item is loaded */
+.photo-tile-item.loaded {
   animation: none;
   background: none;
 }
@@ -79,12 +79,12 @@
 }
 
 /* Fade in when loaded */
-.photo-tile-item img.loaded {
+.photo-tile-item.loaded img {
   opacity: 1;
 }
 
 /* Hover: zoom image */
-.photo-tile-item:hover img.loaded {
+.photo-tile-item.loaded:hover img {
   transform: scale(1.08);
 }
 
