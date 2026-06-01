@@ -20,10 +20,12 @@
       {% assign post_title = entry.title %}
 
       {% for img_url in entry.images %}
-        <a class="photo-tile-item"
+        <a class="photo-tile-item glightbox"
            href="{{ post_url }}"
            title="{{ post_title }}"
-           aria-label="{{ post_title }}">
+           aria-label="{{ post_title }}"
+           data-width="90%"
+           data-height="auto">
           <img src="{{ img_url }}"
                alt="{{ post_title }}"
                loading="lazy"
