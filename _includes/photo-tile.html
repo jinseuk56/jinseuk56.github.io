@@ -4,9 +4,9 @@
   which reads raw Markdown source files and stores results in site.data.post_images.
 
   Performance:
-  - Thumbnail URLs (300px) served via OneDrive resize params — ~10x smaller files
+  - Thumbnail URLs (300px) via OneDrive resize params — ~10x smaller than 660px post images
   - IntersectionObserver: images load only when near the viewport
-  - CSS shimmer skeleton shown while loading; fade-in on load
+  - CSS shimmer skeleton while loading; fade-in on load
 {% endcomment %}
 
 <section class="photo-tile-section">
@@ -45,15 +45,24 @@
   var imgs = grid.querySelectorAll('img[data-src]');
 
   function loadImg(img) {
-    img.src = img.dataset.src;
-    img.removeAttribute('data-src');
+    // Attach listeners BEFORE setting src to avoid race condition
+    // where load fires before listener is registered (e.g. cached images).
     img.addEventListener('load', function () {
       img.classList.add('loaded');
     }, { once: true });
-    // Handle broken / slow images gracefully
     img.addEventListener('error', function () {
-      img.closest('.photo-tile-item').style.display = 'none';
+      var item = img.closest('.photo-tile-item');
+      if (item) item.style.display = 'none';
     }, { once: true });
+
+    img.src = img.dataset.src;
+    img.removeAttribute('data-src');
+
+    // Fallback: if browser already had it cached, complete fires synchronously
+    // before our load listener above — handle it explicitly.
+    if (img.complete && img.naturalWidth > 0) {
+      img.classList.add('loaded');
+    }
   }
 
   if ('IntersectionObserver' in window) {
@@ -65,13 +74,12 @@
         }
       });
     }, {
-      rootMargin: '400px 0px',   // Pre-load 400px before entering viewport
+      rootMargin: '400px 0px',
       threshold: 0
     });
 
     imgs.forEach(function (img) { observer.observe(img); });
   } else {
-    // Fallback for browsers without IntersectionObserver
     imgs.forEach(loadImg);
   }
 })();

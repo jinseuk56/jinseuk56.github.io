@@ -25,7 +25,10 @@ end
 Jekyll::Hooks.register :site, :post_read do |site|
   post_images = []
 
-  site.posts.docs.each do |post|
+  # Sort newest-first so the gallery shows most recent photos at the top.
+  sorted_posts = site.posts.docs.sort_by { |post| post.date }.reverse
+
+  sorted_posts.each do |post|
     raw = File.read(post.path, encoding: 'utf-8')
 
     # Match Markdown image syntax: ![alt](URL) optionally followed by {: .attr }
@@ -42,4 +45,5 @@ Jekyll::Hooks.register :site, :post_read do |site|
 
   site.data['post_images'] = post_images
 end
+
 
