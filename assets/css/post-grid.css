@@ -138,10 +138,16 @@
   object-fit: contain !important;
 }
 
+/* GLightbox inner container should size to media */
+.glightbox-container .ginner-container {
+  width: auto !important;
+  height: auto !important;
+}
+
 /* Description panel (if present) should match the image width */
 .glightbox-container .gslide-description {
   background: rgba(0, 0, 0, 0.75) !important;
   color: #e0e0e0 !important;
-  width: 100% !important;
+  width: auto !important;
 }
 
