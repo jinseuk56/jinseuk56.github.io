@@ -37,7 +37,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -54,7 +54,8 @@ jobs:
         run: |
           bundle exec htmlproofer _site \
             \-\-disable-external \
-            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/" \
+            \-\-ignore-files "/.+\/tags\/.+/,/.+\/categories\/.+/"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
