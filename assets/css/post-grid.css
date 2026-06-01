@@ -9,6 +9,7 @@
   width: 100%;
   margin: 1.8rem 0 !important;
   padding: 0 !important;
+  align-items: stretch; /* Cards in the same row stretch to equal height */
 }
 
 .photo-grid-item {
@@ -21,6 +22,7 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: auto;
 }
 
 /* Hover effect on grid item */
@@ -29,23 +31,25 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
 }
 
-/* The link wrapping the image or image itself */
-.photo-grid-item a,
-.photo-grid-item img {
+/* The link wrapping the image */
+.photo-grid-item a {
   display: block;
-  width: 100%;
-  height: 280px; /* same height for row elements */
+  width: 100% !important;
+  height: auto; /* let it scale naturally */
   margin: 0 !important;
   overflow: hidden;
   border-radius: 0 !important; /* reset wrapper radius */
   border-bottom: none !important; /* remove theme links underlines */
+  flex-grow: 1; /* allow image link to stretch to fill card height */
 }
 
+.photo-grid-item img,
 .photo-grid-item a img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100% !important;
+  height: auto !important; /* scale naturally to match aspect ratio */
+  min-height: 100% !important; /* ensure it fills stretched parent */
+  object-fit: cover !important; /* cover the card space if stretched */
+  display: block !important;
   transition: transform 0.3s ease;
 }
 
@@ -64,6 +68,7 @@
   background: rgba(255, 255, 255, 0.01);
   word-break: break-word;
   line-height: 1.4;
+  margin-top: auto; /* push caption to the bottom of the card */
 }
 
 /* If there's an odd number of items, the last child spans full width */
@@ -77,12 +82,12 @@
 }
 .photo-grid-item:only-child a,
 .photo-grid-item:only-child img {
-  height: auto;
-  max-height: 480px;
+  height: auto !important;
+  max-height: 480px !important;
 }
 .photo-grid-item:only-child a img {
-  height: auto;
-  max-height: 480px;
+  height: auto !important;
+  max-height: 480px !important;
 }
 
 /* Responsive adjustments */
@@ -92,14 +97,5 @@
   }
   .photo-grid-item {
     flex: 1 1 100% !important; /* 1 column on mobile */
-  }
-  .photo-grid-item a,
-  .photo-grid-item img {
-    height: auto !important;
-    max-height: 350px !important;
-  }
-  .photo-grid-item a img {
-    height: auto !important;
-    max-height: 350px !important;
   }
 }
