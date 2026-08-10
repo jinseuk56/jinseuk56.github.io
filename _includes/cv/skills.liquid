@@ -1,0 +1,18 @@
+{% comment %} Site-specific skills renderer with the detailed methods retained from the original CV. {% endcomment %}
+
+<div class="card-text font-weight-light">
+  {% for entry in entries %}
+    <div class="skill-item">
+      <strong>{{ entry.name }}{% if entry.level %} ({{ entry.level }}){% endif %}</strong>
+      {% if entry.highlights %}
+        <ul class="items mb-2">
+          {% for item in entry.highlights %}
+            <li><span class="item">{{ item }}</span></li>
+          {% endfor %}
+        </ul>
+      {% elsif entry.keywords %}
+        <p>{{ entry.keywords | join: ', ' }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

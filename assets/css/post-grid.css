@@ -9,7 +9,7 @@
   width: 100%;
   margin: 1.8rem 0 !important;
   padding: 0 !important;
-  align-items: stretch; /* Cards in the same row stretch to equal height */
+  align-items: flex-start; /* Let each card reserve its own caption height. */
 }
 
 .photo-grid-item {
@@ -23,6 +23,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   height: auto;
+  min-width: 0;
 }
 
 /* Hover effect on grid item */
@@ -40,15 +41,15 @@
   overflow: hidden;
   border-radius: 0 !important; /* reset wrapper radius */
   border-bottom: none !important; /* remove theme links underlines */
-  flex-grow: 1; /* allow image link to stretch to fill card height */
+  flex: 0 0 auto; /* Keep the image's natural height above its caption. */
 }
 
 .photo-grid-item img,
 .photo-grid-item a img {
   width: 100% !important;
   height: auto !important; /* scale naturally to match aspect ratio */
-  min-height: 100% !important; /* ensure it fills stretched parent */
-  object-fit: cover !important; /* cover the card space if stretched */
+  min-height: 0 !important; /* Never force a loaded image over its caption. */
+  object-fit: cover !important;
   display: block !important;
   transition: transform 0.3s ease;
 }
@@ -59,16 +60,18 @@
 
 /* Caption styling inside card */
 .photo-grid-caption {
-  padding: 8px 12px;
-  font-size: 0.85rem;
-  color: var(--text-muted, #7a7a7a);
-  text-align: center;
+  display: block !important;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.875rem;
+  color: var(--global-text-color, #24292f) !important;
+  text-align: left;
   font-style: italic;
-  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.05));
-  background: rgba(255, 255, 255, 0.01);
+  border-top: 1px solid var(--global-divider-color, rgba(127, 127, 127, 0.28));
+  background: var(--global-card-bg-color, rgba(127, 127, 127, 0.08));
   word-break: break-word;
   line-height: 1.4;
-  margin-top: auto; /* push caption to the bottom of the card */
+  margin-top: 0;
+  flex: 0 0 auto;
 }
 
 /* If there's an odd number of items, the last child spans full width */
@@ -99,5 +102,3 @@
     flex: 1 1 100% !important; /* 1 column on mobile */
   }
 }
-
-

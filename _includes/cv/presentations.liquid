@@ -1,0 +1,28 @@
+{% comment %} Presentations use the same compact, scan-friendly structure as publications. {% endcomment %}
+
+<p class="cv-publication-key"><sup>†</sup> presenter or co-presenter; <sup>*</sup> corresponding author.</p>
+<ul class="card-text font-weight-light list-group list-group-flush cv-record-list">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2 text-center">
+          <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+            {{ entry.date | split: '-' | first }}
+          </span>
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+          <h6 class="title font-weight-bold ml-1 ml-md-4">
+            {% if entry.url %}
+              <a href="{{ entry.url }}">{{ entry.title }}</a>
+            {% else %}
+              {{ entry.title }}
+            {% endif %}
+          </h6>
+          {% assign author_markup = entry.authors | replace: 'J. Ryu', '<strong>J. Ryu</strong>' | regex_replace: '([*†]+)', '<sup>\1</sup>' %}
+          <p class="ml-1 ml-md-4 mb-1">{{ author_markup }}</p>
+          <p class="ml-1 ml-md-4 mb-0"><em>{{ entry.type }}</em> · {{ entry.venue }}</p>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
