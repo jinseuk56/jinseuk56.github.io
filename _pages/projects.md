@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 description: Research software, methods, and selected projects.
 nav: true
-nav_order: 3
+nav_order: 2
 display_categories: [research, software]
 horizontal: false
 ---

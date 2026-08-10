@@ -27,15 +27,15 @@ bundle exec jekyll build
 
 ## Current menu map
 
-The main navigation is controlled by `nav: true` and `nav_order` in the front matter of each page. Smaller links under **Blog** are regular links in `_pages/blog.md`; they are not automatic dropdown menus.
+The theme provides the Home link automatically. The remaining main-navigation entries are controlled by `nav: true` and `nav_order` in the front matter of each page. Smaller links under **Blog** are regular links in `_pages/blog.md`; they are not automatic dropdown menus.
 
 | Visible menu or link | URL | Main file to edit | Content source |
 | --- | --- | --- | --- |
 | Home | `/` | `_pages/about.md` | The front matter currently supplies the title and subtitle only. |
-| CV | `/cv/` | `_pages/cv.md` | `_data/cv.yml` plus `_includes/cv/`. |
-| Publications | `/publications/` | `_pages/publications.md` | `_bibliography/papers.bib`. |
 | Projects | `/projects/` | `_pages/projects.md` | Files you create in `_projects/`. |
+| Publications | `/publications/` | `_pages/publications.md` | `_bibliography/papers.bib`. |
 | Blog | `/blog/` | `_pages/blog.md` | All files in `_posts/`. |
+| CV | `/cv/` | `_pages/cv.md` | `_data/cv.yml` plus `_includes/cv/`. |
 | Personal notes | `/notes/` | `_pages/personal-notes.md` | Posts whose category is `personal`. |
 | Research notes | `/research/` | `_pages/research-notes.md` | Posts whose category is `research`. |
 | Photo archive | `/photos/` | `_pages/photos.md` | Images found in post source files. |
@@ -261,7 +261,7 @@ nav: true
 nav_order: 5
 ```
 
-Use a unique `nav_order`. To hide an existing page while retaining its URL, set `nav: false`. To rename it, change `title`. To remove it completely, first check whether other pages link to its `permalink`.
+Use a unique `nav_order`. Home is the theme's built-in navigation link, so do not set `nav: true` on `_pages/about.md`. To hide another existing page while retaining its URL, set `nav: false`. To rename it, change `title`. To remove it completely, first check whether other pages link to its `permalink`.
 
 ## Safe editing checklist
 
@@ -270,4 +270,3 @@ Use a unique `nav_order`. To hide an existing page while retaining its URL, set 
 3. Run `bundle exec jekyll build` before committing or publishing.
 4. Use `git status` to confirm that only the intended files changed.
 5. Do not commit `_site/`, `.jekyll-cache/`, or local temporary files.
-

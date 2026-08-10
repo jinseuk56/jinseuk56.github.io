@@ -15,9 +15,7 @@
           </span>
         </div>
         <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
-          <h6 class="title font-weight-bold ml-1 ml-md-4">
-            <a href="{{ entry.url }}">{{ entry.title }}</a>
-          </h6>
+          <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
           {% assign author_markup = entry.authors | replace: 'J. Ryu', '<strong>J. Ryu</strong>' | regex_replace: '([*†]+)', '<sup>\1</sup>' %}
           <p class="ml-1 ml-md-4 mb-1">{{ author_markup }}</p>
           <h6 class="ml-1 ml-md-4 mb-1" style="font-size: 0.95rem"><em>{{ entry.publisher }}</em></h6>
