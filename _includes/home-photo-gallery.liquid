@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ '/assets/css/home-photo-gallery.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/home-photo-gallery.css' | bust_file_cache | relative_url }}">
 
 <section class="home-photo-gallery" aria-labelledby="home-photo-gallery-title">
   <div class="home-photo-gallery-heading">
@@ -18,7 +18,7 @@
     const photoCount = 48;
     const grid = document.getElementById('home-photo-grid');
     const shuffleButton = document.getElementById('home-photo-shuffle');
-    const manifestUrl = "{{ '/assets/data/home-photos.json' | relative_url }}";
+    const manifestUrl = "{{ '/assets/data/home-photos.json' | bust_file_cache | relative_url }}";
     const imageBaseUrl = "{{ '/assets/img/home/' | relative_url }}";
 
     const shuffle = (items) => {
