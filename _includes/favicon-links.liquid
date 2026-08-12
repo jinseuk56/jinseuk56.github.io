@@ -1,0 +1,10 @@
+{% assign favicon_root = '/assets/img/favicons/' %}
+<link rel="icon" type="image/x-icon" href="{{ favicon_root | append: 'favicon.ico' | relative_url | bust_file_cache }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ favicon_root | append: 'favicon-16x16.png' | relative_url | bust_file_cache }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ favicon_root | append: 'favicon-32x32.png' | relative_url | bust_file_cache }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ favicon_root | append: 'apple-touch-icon.png' | relative_url | bust_file_cache }}">
+<link rel="mask-icon" href="{{ favicon_root | append: 'safari-pinned-tab.svg' | relative_url | bust_file_cache }}" color="#1d3c69">
+<link rel="manifest" href="{{ favicon_root | append: 'site.webmanifest' | relative_url | bust_file_cache }}">
+<meta name="theme-color" content="#1d3c69">
+<meta name="msapplication-TileColor" content="#1d3c69">
+<meta name="msapplication-config" content="{{ favicon_root | append: 'browserconfig.xml' | relative_url | bust_file_cache }}">

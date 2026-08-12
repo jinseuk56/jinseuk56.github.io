@@ -30,4 +30,4 @@ CAETomo brings alignment, feature-map extraction (blind source separation), and 
 
 ## Related research
 
-- J. Jo, **J. Ryu**, _et al._, [Direct three-dimensional observation of plasmonic near-fields](https://doi.org/10.1021/acsnano.4c10677), _ACS Nano_ (2024).
+- J. Jo, **J. Ryu**, _et al._, [Direct three-dimensional observation of the plasmonic near-fields of a nanoparticle with circular dichroism](https://doi.org/10.1021/acsnano.4c10677), _ACS Nano_ (2024).

@@ -31,6 +31,6 @@ The most useful microscopy methods make acquisition and analysis a single cohere
 
 ## Selected outputs
 
-- **J. Ryu**, _et al._, [Correlative 4D-STEM and STEM-EELS for amorphous carbon](https://doi.org/10.1063/5.0100925), _Applied Physics Letters_ (2022).
-- J. Jo, **J. Ryu**, _et al._, [Data-driven three-dimensional EELS tomography](https://doi.org/10.1021/acsnano.4c10677), _ACS Nano_ (2024).
-- **J. Ryu**, _et al._, [Low-dose concurrent 4D-STEM–EDX mapping of lead-halide perovskites](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).
+- **J. Ryu**, _et al._, [Correlative study between the local atomic and electronic structures of amorphous carbon materials via 4D-STEM and STEM-EELS](https://doi.org/10.1063/5.0100925), _Applied Physics Letters_ (2022).
+- J. Jo, **J. Ryu**, _et al._, [Direct three-dimensional observation of the plasmonic near-fields of a nanoparticle with circular dichroism](https://doi.org/10.1021/acsnano.4c10677), _ACS Nano_ (2024).
+- **J. Ryu**, _et al._, [Resolving nanoscale heterogeneities in lead halide perovskites through low dose concurrent 4D-STEM-EDX mapping](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).

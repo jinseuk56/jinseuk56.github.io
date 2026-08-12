@@ -34,8 +34,8 @@ I use transmission electron microscopes (TEM) to connect local structure and che
 
 ## Selected outputs
 
-- **J. Ryu**, _et al._, [Correlative atomic and electronic-structure analysis of amorphous carbon](https://doi.org/10.1063/5.0100925), _Applied Physics Letters_ (2022).
-- J. Jo, **J. Ryu**, _et al._, [Direct three-dimensional observation of plasmonic near-fields](https://doi.org/10.1021/acsnano.4c10677), _ACS Nano_ (2024).
+- **J. Ryu**, _et al._, [Correlative study between the local atomic and electronic structures of amorphous carbon materials via 4D-STEM and STEM-EELS](https://doi.org/10.1063/5.0100925), _Applied Physics Letters_ (2022).
+- J. Jo, **J. Ryu**, _et al._, [Direct three-dimensional observation of the plasmonic near-fields of a nanoparticle with circular dichroism](https://doi.org/10.1021/acsnano.4c10677), _ACS Nano_ (2024).
 - Q. Zeng, _et al._, [A hierarchical shell locks and stabilizes perovskite nanocrystals with near-unity quantum yield](https://doi.org/10.1126/science.ady1370), _Science_ (2026).
-- S. Lee, **J. Ryu**, _et al._, [In situ TEM of electric-field-induced phase transitions in Hf0.5Zr0.5O2](https://doi.org/10.1021/acsnano.5c15856), _ACS Nano_ (2026).
-- **J. Ryu**, _et al._, [Resolving nanoscale heterogeneities in lead-halide perovskites](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).
+- S. Lee, **J. Ryu**, _et al._, [In situ transmission electron microscopy visualization of electric-field-induced phase transitions at the morphotropic phase boundary in Hf0.5Zr0.5O2](https://doi.org/10.1021/acsnano.5c15856), _ACS Nano_ (2026).
+- **J. Ryu**, _et al._, [Resolving nanoscale heterogeneities in lead halide perovskites through low dose concurrent 4D-STEM-EDX mapping](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).

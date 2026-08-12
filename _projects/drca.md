@@ -27,4 +27,4 @@ DRCA is a Python toolkit for data-driven feature extraction from multidimensiona
 
 ## Related research
 
-- **J. Ryu**, _et al._, [Dimensionality reduction and unsupervised clustering for EELS spectrum imaging](https://doi.org/10.1016/j.ultramic.2021.113314), _Ultramicroscopy_ (2021).
+- **J. Ryu**, _et al._, [Dimensionality reduction and unsupervised clustering for EELS-SI](https://doi.org/10.1016/j.ultramic.2021.113314), _Ultramicroscopy_ (2021).

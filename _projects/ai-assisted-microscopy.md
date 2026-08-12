@@ -28,6 +28,6 @@ Modern transmission electron microscopes (TEM) produce increasingly large and hi
 
 ## Selected outputs
 
-- **J. Ryu**, _et al._, [Dimensionality reduction and unsupervised clustering for EELS spectrum imaging](https://doi.org/10.1016/j.ultramic.2021.113314), _Ultramicroscopy_ (2021).
-- J. Jo, **J. Ryu**, _et al._, [Direct three-dimensional observation of plasmonic near-fields](https://doi.org/10.1021/acsnano.4c10677), _ACS Nano_ (2024).
-- **J. Ryu**, _et al._, [Resolving nanoscale heterogeneities in lead-halide perovskites](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).
+- **J. Ryu**, _et al._, [Dimensionality reduction and unsupervised clustering for EELS-SI](https://doi.org/10.1016/j.ultramic.2021.113314), _Ultramicroscopy_ (2021).
+- J. Jo, **J. Ryu**, _et al._, [Direct three-dimensional observation of the plasmonic near-fields of a nanoparticle with circular dichroism](https://doi.org/10.1021/acsnano.4c10677), _ACS Nano_ (2024).
+- **J. Ryu**, _et al._, [Resolving nanoscale heterogeneities in lead halide perovskites through low dose concurrent 4D-STEM-EDX mapping](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).

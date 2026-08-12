@@ -27,4 +27,4 @@ SENDePSIC is a Python package for exploring atomic structure and crystal phases 
 
 ## Related research
 
-- **J. Ryu**, _et al._, [Low-dose concurrent 4D-STEM–EDX mapping of lead-halide perovskites](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).
+- **J. Ryu**, _et al._, [Resolving nanoscale heterogeneities in lead halide perovskites through low dose concurrent 4D-STEM-EDX mapping](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).
