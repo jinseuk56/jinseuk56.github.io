@@ -138,16 +138,16 @@
                   <td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td>
                 </tr>
               {% endif %}
-              {% if cv.label %}
-                <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Professional Title</b></td>
-                  <td class="p-1 pl-2 font-weight-light">{{ cv.label }}</td>
-                </tr>
-              {% endif %}
               {% if cv.email %}
                 <tr>
                   <td class="p-1 pr-2 font-weight-bold"><b>Email</b></td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.email }}</td>
+                </tr>
+              {% endif %}
+              {% if cv.location %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Location</b></td>
+                  <td class="p-1 pl-2 font-weight-light">{{ cv.location }}</td>
                 </tr>
               {% endif %}
               {% if cv.phone %}
@@ -175,6 +175,24 @@
                   </td>
                 </tr>
               {% endif %}
+              {% for social in cv.social_networks %}
+                {% assign network = social.network | downcase %}
+                {% if network == 'github' %}
+                  {% assign social_url = 'https://github.com/' | append: social.username %}
+                {% elsif network == 'linkedin' %}
+                  {% assign social_url = 'https://www.linkedin.com/in/' | append: social.username %}
+                {% elsif network == 'orcid' %}
+                  {% assign social_url = 'https://orcid.org/' | append: social.username %}
+                {% else %}
+                  {% assign social_url = social.username %}
+                {% endif %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold"><b>{{ social.network }}</b></td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    <a href="{{ social_url }}" target="_blank" rel="external nofollow noopener">{{ social.username }}</a>
+                  </td>
+                </tr>
+              {% endfor %}
             </table>
           </div>
         {% endif %}
