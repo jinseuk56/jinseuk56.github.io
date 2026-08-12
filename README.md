@@ -19,7 +19,9 @@ Posts use one of two categories:
 ```bash
 bundle install
 npm ci
-bundle exec jekyll serve
+bundle exec jekyll serve --baseurl "" --host 127.0.0.1 --port 4001
 ```
 
-The local site is available at <http://localhost:4000>.
+The local site is available at <http://127.0.0.1:4001>. The command is meant to keep running while you browse the site; stop it with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
+To enable automatic browser refresh, add `--livereload --livereload-port 35730` to the command. Port 35729 is Jekyll's default live-reload port and may already be in use.

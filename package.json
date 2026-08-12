@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "photos:prepare": "node scripts/prepare-home-photos.mjs",
     "lint:prettier": "prettier . --check",
     "lint:style-contract": "node test/style_contract.js",
     "test:visual": "playwright test --config test/visual/playwright.config.js",
@@ -8,8 +9,10 @@
   "devDependencies": {
     "@playwright/test": "^1.56.1",
     "@shopify/prettier-plugin-liquid": "^1.10.0",
+    "exifr": "^7.1.3",
     "pixelmatch": "^7.1.0",
     "pngjs": "^7.0.0",
-    "prettier": "^3.8.0"
+    "prettier": "^3.8.0",
+    "sharp": "^0.35.3"
   }
 }

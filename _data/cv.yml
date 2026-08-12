@@ -14,6 +14,23 @@ cv:
       username: 0000-0002-9558-3469
 
   sections:
+    Education:
+      - institution: Seoul National University
+        location: Seoul, South Korea
+        area: Materials Science and Engineering
+        studyType: PhD, combined MS/PhD course
+        start_date: "2017-03-01"
+        end_date: "2022-08-29"
+        highlights:
+          - "Advisor: Prof. Miyoung Kim."
+
+      - institution: Seoul National University
+        location: Seoul, South Korea
+        area: Materials Science and Engineering
+        studyType: BS
+        start_date: "2009-03-01"
+        end_date: "2015-08-28"
+
     Experience:
       - company: Research Institute of Advanced Materials (RIAM), Seoul National University
         position: Research Associate Professor
@@ -47,47 +64,21 @@ cv:
         end_date: "2012-05-06"
         summary: Honorable discharge.
 
-    Education:
-      - institution: Seoul National University
-        location: Seoul, South Korea
-        area: Materials Science and Engineering
-        studyType: PhD, combined MS/PhD course
-        start_date: "2017-03-01"
-        end_date: "2022-08-29"
+    Research & Capabilities:
+      - name: AI-Assisted Microscopy Analysis
         highlights:
-          - "Advisor: Prof. Miyoung Kim."
+          - "Data-driven feature extraction from high-dimensional microscopy data through dimensionality reduction, clustering, and representation learning."
+          - "Physically interpretable analysis of EELS spectrum imaging, diffraction, and correlated multimodal measurements."
 
-      - institution: Seoul National University
-        location: Seoul, South Korea
-        area: Materials Science and Engineering
-        studyType: BS
-        start_date: "2009-03-01"
-        end_date: "2015-08-28"
-
-    Teaching:
-      - label: "28th TEM Workshop — Korean Society of Microscopy (20 Jul 2023)"
-        details: "Machine learning in TEM analysis: basics and applications."
-
-      - label: "27th TEM Workshop — Korean Society of Microscopy (28–29 Jul 2022)"
-        details: "STEM-derived multi-dimensional data processing in Python-integrated GMS3."
-
-      - label: "Fundamentals of Computer Science — Department of Materials Science and Engineering, Seoul National University (Sep–Dec 2020)"
-        details: ""
-
-    Skills:
-      - name: (S)TEM experiment and analysis
-        level: Advanced
+      - name: Correlative (S)TEM Characterization
         highlights:
-          - "Acquisition on Cs-corrected TEMs including ARM300CF, ARM200CF, JEM-2100F (JEOL), Themis Z, and Tecnai F20 (Thermo Fisher)."
-          - "4D-STEM, DPC, STEM/EDS/EELS tomography, ptychography, virtual imaging, RDF, FEM, and quantitative chemical analysis."
-          - "Structure–property analysis across battery and photovoltaic materials, catalytic and plasmonic nanoparticles, amorphous materials, functional oxides, and light-emitting materials."
+          - "4D-STEM, STEM-EELS/EDX, electron tomography, and low-dose concurrent acquisition for local structure, chemistry, and phase analysis."
+          - "Application to functional oxides, energy materials, amorphous systems, plasmonic nanostructures, and halide perovskites."
 
-      - name: Microscopy data methods and automation
-        level: Advanced
+      - name: Open Microscopy Software and Workflows
         highlights:
-          - "Python and DigitalMicrograph scripting for microscopy analysis (GitHub: jinseuk56)."
-          - "Feature extraction from large microscopy datasets using supervised, unsupervised, and deep-learning methods (DRCA)."
-          - "Electron/EELS tomography (CAETomo), 4D-STEM processing, hardware communication, measurement automation, and concurrent 4D-STEM/EDX acquisition."
+          - "Python and DigitalMicrograph tools for reproducible analysis, including DRCA, CAETomo, 4D-STEM Processing and Visualization, GMS 3 Tools, and SENDePSIC."
+          - "Interactive and scriptable workflows connecting acquisition, processing, classification, and reconstruction."
 
     Publications:
       - title: "Resolving nanoscale heterogeneities in lead halide perovskites through low dose concurrent 4D-STEM-EDX mapping"
@@ -290,8 +281,24 @@ cv:
         type: Oral presentation
         date: "2020"
 
-    Awards:
+    Other Experience:
+      - title: "Machine learning in TEM analysis: basics and applications"
+        date: "2023-07-20"
+        tag: Teaching
+        awarder: 28th TEM Workshop, Korean Society of Microscopy
+
+      - title: "STEM-derived multidimensional data processing in Python-integrated GMS 3"
+        date: "2022-07-28"
+        tag: Teaching
+        awarder: 27th TEM Workshop, Korean Society of Microscopy
+
       - title: Excellence Prize, Best Paper Award
         date: "2021"
+        tag: Award
         awarder: Seoul National University and Samsung Electronics R&DB Foundation
-        location: South Korea
+
+      - title: Fundamentals of Computer Science
+        date: "2020"
+        tag: Teaching
+        awarder: Department of Materials Science and Engineering, Seoul National University
+        summary: Teaching assistant, Sep–Dec 2020.

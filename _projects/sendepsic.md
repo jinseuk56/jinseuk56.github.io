@@ -1,19 +1,30 @@
 ---
 layout: page
 title: SENDePSIC
-description: Atomic-structure analysis tools for three-dimensional radial-average and radial-variance profile datasets, including concurrent 4D-STEM–EDX workflows.
+description: Tools for exploring atomic structure from radial-profile and concurrent 4D-STEM–EDX datasets.
 importance: 3
 category: software
 github: https://github.com/jinseuk56/SENDePSIC_develop
+img: assets/img/projects/concurrent-4dstem-edx.png
 giscus_comments: false
 ---
 
-SENDePSIC is a Python package for analysing atomic structure using three-dimensional radial-average and radial-variance profile datasets. It was developed for ePSIC data-processing workflows and can also be applied to general profile datasets.
+{% include project-gallery-styles.liquid %}
+{% include project-repository-link.liquid %}
 
-The repository includes Jupyter-notebook examples and tools for concurrent 4D-STEM–EDX datasets. Install a local development version with `pip install -e .` from the repository root.
+SENDePSIC is a Python package for exploring atomic structure and crystal phases through three-dimensional radial-average and radial-variance profiles, developed at electron Physical Science Imaging Centre (ePSIC), Diamond Light Source (United Kingdom). It also supports analysis paths for concurrent 4D-STEM–EDX experiments that are currently available at ePSIC.
+
+<h2 class="project-section-heading">Visual highlights</h2>
+
+<div class="project-gallery">
+  <div class="project-figure">
+    {% include figure.liquid path="assets/img/projects/concurrent-4dstem-edx.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Concurrent 4D-STEM and EDX data acquisition" caption="Concurrent 4D-STEM and EDX data provide complementary structural and chemical signals for analysis." %}
+  </div>
+  <div class="project-figure">
+    {% include figure.liquid path="assets/img/projects/perovskite-heterogeneity.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Nanoscale heterogeneity analysis in lead-halide perovskites" caption="Profile-based analysis helps resolve nanoscale heterogeneity in beam-sensitive perovskites from large 4D-STEM datasets." %}
+  </div>
+</div>
 
 ## Related research
 
-- **J. Ryu**, *et al.*, [Resolving nanoscale heterogeneities in lead halide perovskites through low-dose concurrent 4D-STEM–EDX mapping](https://doi.org/10.1002/adma.74382), *Advanced Materials* (2026).
-- N. Topping, **J. Ryu**, *et al.*, [Sulfur-bearing serpentine in carbonaceous chondrites](https://doi.org/10.1111/maps.70069), *Meteoritics & Planetary Science* (2025).
-
+- **J. Ryu**, _et al._, [Low-dose concurrent 4D-STEM–EDX mapping of lead-halide perovskites](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).

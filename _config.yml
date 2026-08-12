@@ -427,13 +427,13 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: false # Enable when locally stored research images need responsive WebP derivatives.
+  enabled: false # Enabled only for the GitHub Pages production build; keep local previews dependency-free.
   widths:
     - 480
     - 800
     - 1400
   input_directories:
-    - assets/img/
+    - assets/img/projects/
   input_formats:
     - ".jpg"
     - ".jpeg"

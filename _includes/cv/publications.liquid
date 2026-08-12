@@ -5,33 +5,36 @@
 {% endcomment %}
 
 <p class="cv-publication-key"><sup>†</sup> first or co-first author; <sup>*</sup> corresponding author.</p>
-<ul class="card-text font-weight-light list-group list-group-flush cv-record-list">
+{% assign current_year = '' %}
+<div class="cv-record-years">
   {% for entry in entries %}
+    {% assign entry_year = entry.releaseDate | default: entry.date | split: '-' | first %}
+    {% if entry_year != current_year %}
+      {% unless current_year == '' %}
+        </ul>
+      {% endunless %}
+      <h4 class="cv-record-year">{{ entry_year }}</h4>
+      <ul class="card-text font-weight-light list-group list-group-flush cv-record-list">
+      {% assign current_year = entry_year %}
+    {% endif %}
     <li class="list-group-item">
-      <div class="row">
-        <div class="col-xs-2 col-sm-2 col-md-2 text-center">
-          <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
-            {{ entry.releaseDate | default: entry.date | split: '-' | first }}
-          </span>
-        </div>
-        <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
-          <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
-          {% assign author_markup = entry.authors | replace: 'J. Ryu', '<strong>J. Ryu</strong>' | regex_replace: '([*†]+)', '<sup>\1</sup>' %}
-          <p class="ml-1 ml-md-4 mb-1">{{ author_markup }}</p>
-          <h6 class="ml-1 ml-md-4 mb-1" style="font-size: 0.95rem"><em>{{ entry.publisher }}</em></h6>
-          {% if entry.doi %}
-            <p class="ml-1 ml-md-4 mb-0"><span class="font-weight-bold">DOI:</span> <a href="https://doi.org/{{ entry.doi }}">{{ entry.doi }}</a></p>
-          {% endif %}
-        </div>
-      </div>
+      <h6 class="title font-weight-bold">{{ entry.title }}</h6>
+      {% assign author_markup = entry.authors | replace: 'J. Ryu', '<strong>J. Ryu</strong>' | regex_replace: '([*†]+)', '<sup>\1</sup>' %}
+      <p class="mb-1">{{ author_markup }}</p>
+      <h6 class="mb-1" style="font-size: 0.95rem"><em>{{ entry.publisher }}</em></h6>
+      {% if entry.doi %}
+        <p class="mb-0"><span class="font-weight-bold">DOI:</span> <a href="https://doi.org/{{ entry.doi }}">{{ entry.doi }}</a></p>
+      {% endif %}
     </li>
   {% endfor %}
-</ul>
+  {% unless current_year == '' %}
+    </ul>
+  {% endunless %}
+</div>
 
 <style>
   .cv .cv-record-list .list-group-item {
-    padding-top: 0.55rem;
-    padding-bottom: 0.55rem;
+    padding: 0.65rem 0;
   }
 
   .cv .cv-record-list .title {
@@ -47,5 +50,17 @@
 
   .cv .cv-publication-key {
     margin-bottom: 0.35rem;
+  }
+
+  .cv .cv-record-year {
+    margin: 1.15rem 0 0.2rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--global-divider-color);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .cv .cv-publication-key + .cv-record-years .cv-record-year:first-child {
+    margin-top: 0.35rem;
   }
 </style>

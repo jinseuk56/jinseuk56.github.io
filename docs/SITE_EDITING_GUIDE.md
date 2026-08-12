@@ -14,10 +14,12 @@ This is the working guide for this repository. It describes the pages that are c
 From the repository root:
 
 ```bash
-bundle exec jekyll serve --livereload --baseurl ""
+bundle exec jekyll serve --baseurl "" --host 127.0.0.1 --port 4001
 ```
 
-Open `http://127.0.0.1:4000/`. Keep the command running while you edit. The browser refreshes after a successful rebuild. If a build fails, the first error normally identifies the file and line to correct.
+Open `http://127.0.0.1:4001/`. Keep the command running while you edit; this is expected behaviour, not a stalled build. Stop it with <kbd>Ctrl</kbd>+<kbd>C</kbd>. If a build fails, the first error normally identifies the file and line to correct.
+
+For automatic browser refresh, use `bundle exec jekyll serve --livereload --livereload-port 35730 --baseurl "" --host 127.0.0.1 --port 4001`. The default live-reload port (`35729`) can be occupied by another process.
 
 To run a one-off production-style check instead:
 
@@ -29,16 +31,16 @@ bundle exec jekyll build
 
 The theme provides the Home link automatically. The remaining main-navigation entries are controlled by `nav: true` and `nav_order` in the front matter of each page. Smaller links under **Blog** are regular links in `_pages/blog.md`; they are not automatic dropdown menus.
 
-| Visible menu or link | URL | Main file to edit | Content source |
-| --- | --- | --- | --- |
-| Home | `/` | `_pages/about.md` | The front matter currently supplies the title and subtitle only. |
-| Projects | `/projects/` | `_pages/projects.md` | Files you create in `_projects/`. |
-| Publications | `/publications/` | `_pages/publications.md` | `_bibliography/papers.bib`. |
-| Blog | `/blog/` | `_pages/blog.md` | All files in `_posts/`. |
-| CV | `/cv/` | `_pages/cv.md` | `_data/cv.yml` plus `_includes/cv/`. |
-| Personal notes | `/notes/` | `_pages/personal-notes.md` | Posts whose category is `personal`. |
-| Research notes | `/research/` | `_pages/research-notes.md` | Posts whose category is `research`. |
-| Photo archive | `/photos/` | `_pages/photos.md` | Images found in post source files. |
+| Visible menu or link | URL              | Main file to edit          | Content source                                                   |
+| -------------------- | ---------------- | -------------------------- | ---------------------------------------------------------------- |
+| Home                 | `/`              | `_pages/about.md`          | Title, subtitle, and the randomized photo contact sheet.         |
+| Projects             | `/projects/`     | `_pages/projects.md`       | Files you create in `_projects/`.                                |
+| Publications         | `/publications/` | `_pages/publications.md`   | `_bibliography/papers.bib`.                                      |
+| Blog                 | `/blog/`         | `_pages/blog.md`           | All files in `_posts/`.                                          |
+| CV                   | `/cv/`           | `_pages/cv.md`             | `_data/cv.yml` plus `_includes/cv/`.                             |
+| Personal notes       | `/notes/`        | `_pages/personal-notes.md` | Posts whose category is `personal`.                              |
+| Research notes       | `/research/`     | `_pages/research-notes.md` | Posts whose category is `research`.                              |
+| Photo archive        | `/photos/`       | `_pages/photos.md`         | Images found in post source files.                               |
 
 The old `/ryuserve/` and `/ryuserve/cv/` pages are redirects for old links. Keep them unless you intentionally want to break old bookmarks.
 
@@ -53,7 +55,22 @@ title: Home
 subtitle: Electron Microscopist & Materials Scientist
 ```
 
-`profile: false`, `social: false`, `selected_papers: false`, and the disabled sections keep the page blank apart from its heading. Turn one of those options on only when you want the corresponding al-folio component to appear.
+`profile: false`, `social: false`, `selected_papers: false`, and the disabled sections keep the page focused on its heading and photo contact sheet. Turn one of those options on only when you want the corresponding al-folio component to appear.
+
+### Home photo contact sheet
+
+The source photos remain private in `/home/ryuserve/github_repo/resources/photos`; do **not** copy those originals into this repository. The committed web copies are generated under `assets/img/home/`, with their year metadata stored in `assets/data/home-photos.json`.
+
+After adding or replacing source photos, run this from the site repository:
+
+```bash
+npm ci
+npm run photos:prepare
+```
+
+The command converts supported JPEG, PNG, and HEIC inputs into metadata-free 720-pixel WebP files. It removes EXIF and GPS metadata, reads the capture year from EXIF when available, and falls back to a year in the filename. The Home page shows 48 random photos at a time; hovering, focusing, or tapping a tile reveals its year, and **Shuffle photos** selects a new set.
+
+If a source file cannot be read, the command reports it and continues. Convert or repair that source file separately, then run the command again.
 
 ## CV
 
@@ -64,7 +81,7 @@ Edit `_data/cv.yml`. This is the single source of CV content.
 - Contact information: `name`, `label`, `email`, and `social_networks` at the top of the file.
 - Employment: `sections: Experience`.
 - Education: `sections: Education`.
-- Teaching, skills, publications, presentations, and awards: their matching names under `sections`.
+- Research & Capabilities, publications, presentations, and Other Experience: their matching names under `sections`. `Other Experience` combines teaching activities and awards.
 
 Use two spaces for each YAML indentation level. Dates use `YYYY-MM-DD`; the CV displays the year. For a current role use `end_date: present`.
 
@@ -121,7 +138,7 @@ The CV publication list is deliberately separate. To add a publication to it, ad
 
 ## Projects
 
-The `/projects/` page is ready, but the repository currently has no `_projects/` directory or project entries. Create the directory and add one Markdown file per project. The file name becomes part of the URL.
+The `/projects/` page is populated from `_projects/`: one Markdown file per research theme or software project. The file name becomes part of the URL. Keep each entry concise—the Projects page is a portfolio preview, while the linked repository and Publications page carry the full technical record.
 
 Example: create `_projects/caetomo.md`:
 
@@ -136,7 +153,7 @@ category: software
 giscus_comments: false
 ---
 
-One or two concise paragraphs describing the project, its contribution, and its current status.
+Use a short introduction, one informative image where it improves the page, and only a few selected paper or repository links.
 
 - Link to a repository, documentation, paper, or demo.
 - State your role and the methods used.
@@ -150,13 +167,15 @@ Important fields:
 - `importance`: numeric order; lower numbers appear first.
 - `category`: must match one of `research` or `software`, because `_pages/projects.md` currently displays only those categories.
 
+Project images are stored in `assets/img/projects/`. Keep the original image there; the GitHub Pages build automatically creates 480 px, 800 px, and 1400 px WebP derivatives for visitors. Local previews deliberately skip that conversion, so ImageMagick is not required on your computer.
+
 To add a new visible project category, change this line in `_pages/projects.md`:
 
 ```yaml
 display_categories: [research, software]
 ```
 
-For example, add `outreach` there and use `category: outreach` in relevant project files. To show projects in wider two-column cards, change `horizontal: false` to `horizontal: true`.
+For example, add `outreach` there and use `category: outreach` in relevant project files. The current page uses a consistent two-column card grid for every category.
 
 ## Blog and its sub-menus
 
@@ -266,7 +285,7 @@ Use a unique `nav_order`. Home is the theme's built-in navigation link, so do no
 ## Safe editing checklist
 
 1. Make the source edit.
-2. Run `bundle exec jekyll serve --livereload --baseurl ""` and check the relevant URL.
+2. Run `bundle exec jekyll serve --baseurl "" --host 127.0.0.1 --port 4001` and check the relevant URL.
 3. Run `bundle exec jekyll build` before committing or publishing.
 4. Use `git status` to confirm that only the intended files changed.
 5. Do not commit `_site/`, `.jekyll-cache/`, or local temporary files.

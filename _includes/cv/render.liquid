@@ -37,22 +37,73 @@
   <article>
     <div class="cv">
       <style>
-        /* Keep the date/location column fixed and contain long locations. */
-        .cv .date-column {
-          min-width: 0;
+        /* The compatibility layer does not reset Bootstrap's list-group markup. */
+        .cv ul.list-group {
+          margin: 0;
+          padding: 0;
+          list-style: none;
         }
 
-        .cv .date-column .table-cv {
+        .cv ul.list-group > .list-group-item {
+          padding: 1rem 0;
+          list-style: none;
+        }
+
+        /* A deliberate metadata rail replaces the theme's negative date offset. */
+        .cv ul.list-group > .list-group-item > .row {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.25rem;
+          margin: 0;
+        }
+
+        .cv ul.list-group > .list-group-item .date-column {
+          flex: 0 0 8rem;
+          width: 8rem;
+          max-width: 8rem;
+          min-width: 0;
+          padding: 0;
+          text-align: center;
+          transform: none;
+        }
+
+        .cv ul.list-group > .list-group-item .date-column + [class*='col-'] {
+          flex: 1 1 0;
+          width: auto;
+          max-width: none;
+          min-width: 0;
+          padding: 0;
+        }
+
+        .cv ul.list-group > .list-group-item .date-column .table-cv {
           width: 100%;
           table-layout: fixed;
           margin-bottom: 0;
         }
 
-        .cv .date-column .location {
+        .cv ul.list-group > .list-group-item .date-column .location {
           margin: 0.45rem 0 0;
           white-space: normal;
           overflow-wrap: anywhere;
           line-height: 1.25;
+        }
+
+        .cv ul.list-group > .list-group-item .ml-1,
+        .cv ul.list-group > .list-group-item .ml-md-4 {
+          margin-left: 0 !important;
+        }
+
+        @media (max-width: 575.98px) {
+          .cv ul.list-group > .list-group-item > .row {
+            gap: 0.35rem;
+          }
+
+          .cv ul.list-group > .list-group-item .date-column,
+          .cv ul.list-group > .list-group-item .date-column + [class*='col-'] {
+            flex-basis: 100%;
+            width: 100%;
+            max-width: 100%;
+          }
         }
       </style>
       {% comment %} Determine which CV format to render {% endcomment %}
@@ -128,30 +179,13 @@
           </div>
         {% endif %}
 
-        <!-- RenderCV Sections - Merge Experience and Volunteer -->
-        {% comment %} First, combine Experience and Volunteer entries {% endcomment %}
-        {% assign empty_array = '' | split: ',' %}
-        {% assign exp = cv.sections.Experience | default: empty_array %}
-        {% assign vol = cv.sections.Volunteer | default: empty_array %}
-        {% assign combined_experience = exp | concat: vol | al_cv_sort_by_date %}
-        {% if combined_experience.size > 0 %}
-          <a class="anchor" id="experience"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
-            <div>
-              {% assign entries = combined_experience %}
-              {% include cv/experience.liquid %}
-            </div>
-          </div>
-        {% endif %}
-
-        {% comment %} Now render all other sections except Experience and Volunteer {% endcomment %}
+        <!-- Render sections in the order defined in _data/cv.yml. -->
         {% for section_pair in cv.sections %}
           {% assign section_title = section_pair[0] %}
           {% assign section_entries = section_pair[1] %}
 
-          {% comment %} Skip Experience and Volunteer as we've already processed them combined {% endcomment %}
-          {% if section_title == 'Experience' or section_title == 'Volunteer' %}
+          {% comment %} Volunteer entries, if present, are rendered with Experience. {% endcomment %}
+          {% if section_title == 'Volunteer' %}
             {% continue %}
           {% endif %}
 
@@ -159,9 +193,17 @@
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
             <div>
-              {% if section_title == 'Education' %}
+              {% if section_title == 'Experience' %}
+                {% assign empty_array = '' | split: ',' %}
+                {% assign volunteer_entries = cv.sections.Volunteer | default: empty_array %}
+                {% assign entries = section_entries | concat: volunteer_entries | al_cv_sort_by_date %}
+                {% include cv/experience.liquid %}
+              {% elsif section_title == 'Education' %}
                 {% assign entries = section_entries | al_cv_sort_by_date %}
                 {% include cv/education.liquid %}
+              {% elsif section_title == 'Other Experience' %}
+                {% assign entries = section_entries %}
+                {% include cv/other-experience.liquid %}
               {% elsif section_title == 'Awards' or section_title == 'Honors and Awards' %}
                 {% assign entries = section_entries %}
                 {% include cv/awards.liquid %}
@@ -171,7 +213,7 @@
               {% elsif section_title == 'Presentations' %}
                 {% assign entries = section_entries %}
                 {% include cv/presentations.liquid %}
-              {% elsif section_title == 'Skills' %}
+              {% elsif section_title == 'Skills' or section_title == 'Research & Capabilities' %}
                 {% assign entries = section_entries %}
                 {% include cv/skills.liquid %}
               {% elsif section_title == 'Languages' %}

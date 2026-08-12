@@ -1,0 +1,3 @@
+# Production-only overrides. GitHub Actions installs ImageMagick before building.
+imagemagick:
+  enabled: true

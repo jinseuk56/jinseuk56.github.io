@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="{{ '/assets/css/home-photo-gallery.css' | relative_url }}">
+
+<section class="home-photo-gallery" aria-labelledby="home-photo-gallery-title">
+  <div class="home-photo-gallery-heading">
+    <div>
+      <p class="home-photo-gallery-kicker">Visual notebook</p>
+      <h2 id="home-photo-gallery-title">Long Journey</h2>
+    </div>
+    <button class="home-photo-shuffle" id="home-photo-shuffle" type="button">
+      <i class="fa-solid fa-shuffle" aria-hidden="true"></i> Shuffle photos
+    </button>
+  </div>
+  <div class="home-photo-grid" id="home-photo-grid"></div>
+</section>
+
+<script>
+  (() => {
+    const photoCount = 48;
+    const grid = document.getElementById('home-photo-grid');
+    const shuffleButton = document.getElementById('home-photo-shuffle');
+    const manifestUrl = "{{ '/assets/data/home-photos.json' | relative_url }}";
+    const imageBaseUrl = "{{ '/assets/img/home/' | relative_url }}";
+
+    const shuffle = (items) => {
+      const shuffled = [...items];
+      for (let index = shuffled.length - 1; index > 0; index -= 1) {
+        const swapIndex = Math.floor(Math.random() * (index + 1));
+        [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+      }
+      return shuffled;
+    };
+    const render = (photos) => {
+      grid.replaceChildren();
+      shuffle(photos)
+        .slice(0, photoCount)
+        .forEach((photo) => {
+          const figure = document.createElement('figure');
+          figure.className = 'home-photo-tile';
+          figure.tabIndex = 0;
+          figure.setAttribute('aria-label', `Photograph taken in ${photo.year}`);
+
+          const image = document.createElement('img');
+          image.src = `${imageBaseUrl}${photo.file}`;
+          image.alt = '';
+          image.loading = 'lazy';
+          image.decoding = 'async';
+
+          const caption = document.createElement('figcaption');
+          caption.textContent = photo.year;
+          figure.append(image, caption);
+          grid.append(figure);
+        });
+    };
+
+    fetch(manifestUrl)
+      .then((response) => (response.ok ? response.json() : Promise.reject(response)))
+      .then((manifest) => {
+        render(manifest.photos);
+        shuffleButton.addEventListener('click', () => render(manifest.photos));
+      })
+      .catch(() => {
+        grid.innerHTML = '<p class="home-photo-gallery-error">The photo selection is unavailable in this preview.</p>';
+        shuffleButton.hidden = true;
+      });
+  })();
+</script>

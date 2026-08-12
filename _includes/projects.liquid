@@ -1,0 +1,26 @@
+<div class="col">
+  <div class="card h-100 hoverable">
+    {% if project.img %}
+      <a class="project-card-media" href="{{ project.url | relative_url }}" aria-label="Open {{ project.title }}">
+        {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 400px, 95vw" alt=project.title class="card-img-top" %}
+      </a>
+    {% endif %}
+    <div class="card-body">
+      <h2 class="card-title">
+        <a class="project-card-page-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+      </h2>
+      <p class="card-text">{{ project.description }}</p>
+      <div class="project-card-actions">
+        {% if project.github %}
+          <a class="project-repository-link" href="{{ project.github }}" rel="external nofollow noopener" target="_blank">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub
+          </a>
+        {% else %}
+          <a class="project-page-link" href="{{ project.url | relative_url }}"
+            >Explore project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+          ></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

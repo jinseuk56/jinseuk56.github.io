@@ -14,3 +14,5 @@ announcements:
 latest_posts:
   enabled: false
 ---
+
+{% include home-photo-gallery.liquid %}
