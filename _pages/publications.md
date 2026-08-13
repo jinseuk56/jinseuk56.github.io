@@ -9,6 +9,8 @@ nav_order: 3
 
 <!-- _pages/publications.md -->
 
+<link rel="stylesheet" href="{{ '/assets/css/section-headings.css' | bust_file_cache | relative_url }}">
+
 <!-- Bibsearch Feature -->
 
 {% include bib_search.liquid %}

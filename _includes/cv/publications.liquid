@@ -18,12 +18,12 @@
       {% assign current_year = entry_year %}
     {% endif %}
     <li class="list-group-item">
-      <h6 class="title font-weight-bold">{{ entry.title }}</h6>
+      <h6 class="title">{{ entry.title }}</h6>
       {% assign author_markup = entry.authors | replace: 'J. Ryu', '<strong>J. Ryu</strong>' | regex_replace: '([*†]+)', '<sup>\1</sup>' %}
       <p class="mb-1">{{ author_markup }}</p>
       <h6 class="mb-1" style="font-size: 0.95rem"><em>{{ entry.publisher }}</em></h6>
       {% if entry.doi %}
-        <p class="mb-0"><span class="font-weight-bold">DOI:</span> <a href="https://doi.org/{{ entry.doi }}">{{ entry.doi }}</a></p>
+        <p class="mb-0"><span>DOI:</span> <a href="https://doi.org/{{ entry.doi }}">{{ entry.doi }}</a></p>
       {% endif %}
     </li>
   {% endfor %}
@@ -48,6 +48,20 @@
     line-height: 1.35;
   }
 
+  .cv .cv-record-list,
+  .cv .cv-record-list .list-group-item,
+  .cv .cv-record-list .title,
+  .cv .cv-record-list p,
+  .cv .cv-record-list em,
+  .cv .cv-record-list a,
+  .cv .cv-record-list span {
+    font-weight: 300;
+  }
+
+  .cv .cv-record-list strong {
+    font-weight: 700;
+  }
+
   .cv .cv-publication-key {
     margin-bottom: 0.35rem;
   }
@@ -57,7 +71,7 @@
     padding-top: 0.85rem;
     border-top: 1px solid var(--global-divider-color);
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .cv .cv-publication-key + .cv-record-years .cv-record-year:first-child {

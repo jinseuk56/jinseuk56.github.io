@@ -14,7 +14,7 @@
       {% assign current_year = entry_year %}
     {% endif %}
     <li class="list-group-item">
-      <h6 class="title font-weight-bold">
+      <h6 class="title">
         {% if entry.url %}
           <a href="{{ entry.url }}">{{ entry.title }}</a>
         {% else %}
@@ -30,3 +30,23 @@
     </ul>
   {% endunless %}
 </div>
+
+<style>
+  .cv .cv-record-list,
+  .cv .cv-record-list .list-group-item,
+  .cv .cv-record-list .title,
+  .cv .cv-record-list p,
+  .cv .cv-record-list em,
+  .cv .cv-record-list a,
+  .cv .cv-record-list span {
+    font-weight: 300;
+  }
+
+  .cv .cv-record-list strong {
+    font-weight: 700;
+  }
+
+  .cv .cv-record-year {
+    font-weight: 700;
+  }
+</style>

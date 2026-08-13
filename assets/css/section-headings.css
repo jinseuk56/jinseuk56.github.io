@@ -1,0 +1,28 @@
+/* Typography-only refinements for portfolio categories and publication years. */
+
+:root {
+  --section-heading-color: #241426;
+}
+
+html[data-theme='dark'] {
+  --section-heading-color: #f4f8ff;
+}
+
+.projects h2.category,
+.publications h2.bibliography {
+  color: var(--section-heading-color);
+}
+
+.projects h2.category {
+  font-size: clamp(1.75rem, 3vw, 2.15rem);
+}
+
+.publications h2.bibliography {
+  font-size: clamp(1.4rem, 2.4vw, 1.7rem);
+}
+
+@media (max-width: 575.98px) {
+  .projects h2.category {
+    font-size: 1.65rem;
+  }
+}
