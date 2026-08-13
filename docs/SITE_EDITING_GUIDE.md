@@ -68,7 +68,7 @@ npm ci
 npm run photos:prepare
 ```
 
-The command converts supported JPEG, PNG, and HEIC inputs into metadata-free 720-pixel WebP files. It removes EXIF and GPS metadata, reads the capture year from EXIF when available, and falls back to a year in the filename. The Home page shows 48 random photos at a time; hovering, focusing, or tapping a tile reveals its year, and **Shuffle photos** selects a new set.
+The command recursively scans supported JPEG, PNG, and HEIC inputs in that folder and its subfolders (for example, `set_01/` and `set_02/`) and converts them into metadata-free 720-pixel WebP files. It removes EXIF and GPS metadata, reads the capture year from EXIF when available, and falls back to a year in the filename. The Home page shows 48 random photos at a time; hovering, focusing, or tapping a tile reveals its year, and **Shuffle photos** selects a new set.
 
 If a source file cannot be read, the command reports it and continues. Convert or repair that source file separately, then run the command again.
 

@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, stat, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import exifr from "exifr";
@@ -11,12 +11,27 @@ const manifestPath = path.resolve("assets/data/home-photos.json");
 const imageExtensions = new Set([".heic", ".jpeg", ".jpg", ".png"]);
 
 const fallbackYear = (filename) => filename.match(/(?:19|20)\d{2}/)?.[0] || null;
-const photoId = (filename) => createHash("sha256").update(filename).digest("hex").slice(0, 12);
+const photoId = (relativePath) => createHash("sha256").update(relativePath).digest("hex").slice(0, 12);
 
-const files = (await readdir(sourceDirectory, { withFileTypes: true }))
-  .filter((entry) => entry.isFile() && imageExtensions.has(path.extname(entry.name).toLowerCase()))
-  .map((entry) => entry.name)
-  .sort((first, second) => first.localeCompare(second));
+const collectFiles = async (directory, relativeDirectory = "") => {
+  const entries = await readdir(directory, { withFileTypes: true });
+  const collected = [];
+
+  for (const entry of entries.sort((first, second) => first.name.localeCompare(second.name))) {
+    const relativePath = path.join(relativeDirectory, entry.name);
+    const absolutePath = path.join(directory, entry.name);
+
+    if (entry.isDirectory()) {
+      collected.push(...(await collectFiles(absolutePath, relativePath)));
+    } else if (entry.isFile() && imageExtensions.has(path.extname(entry.name).toLowerCase())) {
+      collected.push({ absolutePath, relativePath });
+    }
+  }
+
+  return collected;
+};
+
+const files = await collectFiles(sourceDirectory);
 
 if (files.length === 0) {
   throw new Error(`No supported images found in ${sourceDirectory}`);
@@ -30,10 +45,9 @@ const skipped = [];
 let sourceBytes = 0;
 let outputBytes = 0;
 
-for (const filename of files) {
+for (const { absolutePath: sourcePath, relativePath } of files) {
   try {
-    const sourcePath = path.join(sourceDirectory, filename);
-    const id = photoId(filename);
+    const id = photoId(relativePath);
     const outputName = `${id}.webp`;
     const outputPath = path.join(outputDirectory, outputName);
     const [metadata, exif, sourceInfo] = await Promise.all([
@@ -50,7 +64,7 @@ for (const filename of files) {
 
     const outputInfo = await stat(outputPath);
     const capturedAt = exif?.DateTimeOriginal || exif?.CreateDate || exif?.ModifyDate;
-    const year = capturedAt ? String(capturedAt.getFullYear()) : fallbackYear(filename);
+    const year = capturedAt ? String(capturedAt.getFullYear()) : fallbackYear(relativePath);
     sourceBytes += sourceInfo.size;
     outputBytes += outputInfo.size;
     photos.push({
@@ -59,7 +73,23 @@ for (const filename of files) {
       orientation: metadata.width >= metadata.height ? "landscape" : "portrait",
     });
   } catch (error) {
-    skipped.push({ filename, error: error.message.split("\n")[0] });
+    skipped.push({ filename: relativePath, error: error.message.split("\n")[0] });
+  }
+}
+
+const expectedFiles = new Set(photos.map(({ file }) => file));
+try {
+  const previousManifest = JSON.parse(await readFile(manifestPath, "utf8"));
+  const staleFiles = (previousManifest.photos || [])
+    .map(({ file }) => file)
+    .filter((file) => file.endsWith(".webp") && !expectedFiles.has(file));
+  await Promise.all(staleFiles.map((file) => unlink(path.join(outputDirectory, file))));
+  if (staleFiles.length > 0) {
+    console.log(`Removed ${staleFiles.length} stale generated thumbnail(s).`);
+  }
+} catch (error) {
+  if (error.code !== "ENOENT") {
+    console.warn(`Could not clean stale thumbnails: ${error.message.split("\n")[0]}`);
   }
 }
 
