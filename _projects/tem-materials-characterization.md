@@ -19,13 +19,13 @@ I use transmission electron microscopes (TEM) to connect local structure and che
     {% include figure.liquid path="assets/img/projects/chiral-gold-plasmon-3d.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Three-dimensional plasmonic near-field observation of a chiral gold nanoparticle" caption="Three-dimensional plasmonic near-fields resolved around a chiral gold nanoparticle." %}
   </div>
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/cspbbr3-strain-analysis.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Strain analysis of beam-sensitive nanoparticles" caption="Nanoscale strain analysis of a CsPbBr3 nanoparticle." %}
+    {% include figure.liquid path="assets/img/projects/cspbbr3-strain-analysis.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Strain analysis of beam-sensitive nanoparticles" caption="Atomic-scale strain analysis of a CsPbBr3 nanoparticle." %}
   </div>
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/amorphous-carbon-bonding.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Data-driven analysis of bonding variation in amorphous carbon" caption="Data-driven EELS analysis connects local bonding variation with amorphous-carbon structure." %}
+    {% include figure.liquid path="assets/img/projects/amorphous-carbon-bonding.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Data-driven analysis of bonding variation in amorphous carbon" caption="Data-driven analysis connects local bonding variation with amorphous structure." %}
   </div>
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/hzo-analysis.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="in situ biasing TEM investigation of hafnium zirconium oxide" caption="Microscopy analysis of local phase behaviour in hafnium zirconium oxide." %}
+    {% include figure.liquid path="assets/img/projects/hzo-analysis.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="in situ biasing TEM investigation of hafnium zirconium oxide" caption="in situ TEM analysis of local phase behaviour in hafnium zirconium oxide." %}
   </div>
   <div class="project-figure">
     {% include figure.liquid path="assets/img/projects/perovskite-heterogeneity.png" class="img-fluid rounded z-depth-1" alt="Nanoscale heterogeneity analysis in lead-halide perovskites" caption="Spatially resolved analysis of nanoscale heterogeneity and phase evolution in lead-halide perovskites." %}

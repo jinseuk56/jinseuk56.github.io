@@ -14,14 +14,8 @@
       {% assign current_year = entry_year %}
     {% endif %}
     <li class="list-group-item">
-      <h6 class="title">
-        {% if entry.url %}
-          <a href="{{ entry.url }}">{{ entry.title }}</a>
-        {% else %}
-          {{ entry.title }}
-        {% endif %}
-      </h6>
-      {% assign author_markup = entry.authors | replace: 'J. Ryu', '<strong>J. Ryu</strong>' | regex_replace: '([*†]+)', '<sup>\1</sup>' %}
+      <h6 class="title">{{ entry.title }}</h6>
+      {% assign author_markup = entry.authors | replace: 'J. Ryu', '<strong><u>J. Ryu</u></strong>' | regex_replace: '([*†]+)', '<sup>\1</sup>' %}
       <p class="mb-1">{{ author_markup }}</p>
       <p class="mb-0"><em>{{ entry.type }}</em> · {{ entry.venue }}</p>
     </li>

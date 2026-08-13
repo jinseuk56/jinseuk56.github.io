@@ -65,19 +65,19 @@ cv:
         summary: Honorable discharge.
 
     Research & Capabilities:
-      - name: AI-Assisted Microscopy Analysis
+      - name: Data-driven and AI-Assisted Microscopy Analysis
         highlights:
-          - "Data-driven feature extraction from high-dimensional microscopy data through dimensionality reduction, clustering, and representation learning."
-          - "Physically interpretable analysis of EELS spectrum imaging, diffraction, and correlated multimodal measurements."
+          - "Blind source separation and feature extraction from high-dimensional microscopy data through dimensionality reduction and clustering."
+          - "Physically interpretable data-driven analysis of spectrum and diffraction datasets and correlated multimodal measurements."
 
       - name: Correlative (S)TEM Characterization
         highlights:
-          - "4D-STEM, STEM-EELS/EDX, electron tomography, and low-dose concurrent acquisition for local structure, chemistry, and phase analysis."
-          - "Application to functional oxides, energy materials, amorphous systems, plasmonic nanostructures, and halide perovskites."
+          - "4D-STEM, STEM-EELS/EDX, electron tomography, and multimodal acquisition for local structure, chemistry, and phase analysis."
+          - "Application to functional oxides, energy materials, amorphous systems, and plasmonic nanostructures."
 
       - name: Open Microscopy Software and Workflows
         highlights:
-          - "Python and DigitalMicrograph tools for reproducible analysis, including DRCA, CAETomo, 4D-STEM Processing and Visualization, GMS 3 Tools, and SENDePSIC."
+          - "Python and DigitalMicrograph tools for reproducible analysis, including DRCA, CAETomo, SENDePSIC, GMS3 Tools, etc."
           - "Interactive and scriptable workflows connecting acquisition, processing, classification, and reconstruction."
 
     Publications:

@@ -18,10 +18,10 @@ This repository collects approachable tools and examples for processing four-dim
 
 <div class="project-gallery">
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/4dstem-processing.png" class="img-fluid rounded z-depth-1" alt="4D-STEM data-processing workflow" caption="4D-STEM processing turns a diffraction pattern at every probe position into spatially resolved materials information." %}
+    {% include figure.liquid path="assets/img/projects/4dstem-processing.png" class="img-fluid rounded z-depth-1" alt="4D-STEM data-processing workflow" caption="4D-STEM processing is usually necessary to retrieve specific materials information, e.g., radial profile generation, dark-field imaging, center of mass calculation, etc." %}
   </div>
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/4dstem-drca-amorphous-rdf.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="4D-STEM radial distribution function analysis of amorphous materials" caption="Investigation and mapping of local short-range and medium-range ordering in amorphous carbon." %}
+    {% include figure.liquid path="assets/img/projects/4dstem-drca-amorphous-rdf.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="4D-STEM radial distribution function analysis of amorphous materials" caption="Investigation of local short-range and medium-range ordering in amorphous materials using radial distribution function (RDF) analysis." %}
   </div>
 </div>
 

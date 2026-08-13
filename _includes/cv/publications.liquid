@@ -19,7 +19,7 @@
     {% endif %}
     <li class="list-group-item">
       <h6 class="title">{{ entry.title }}</h6>
-      {% assign author_markup = entry.authors | replace: 'J. Ryu', '<strong>J. Ryu</strong>' | regex_replace: '([*†]+)', '<sup>\1</sup>' %}
+      {% assign author_markup = entry.authors | replace: 'J. Ryu', '<strong><u>J. Ryu</u></strong>' | regex_replace: '([*†]+)', '<sup>\1</sup>' %}
       <p class="mb-1">{{ author_markup }}</p>
       <h6 class="mb-1" style="font-size: 0.95rem"><em>{{ entry.publisher }}</em></h6>
       {% if entry.doi %}
