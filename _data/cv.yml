@@ -18,10 +18,11 @@ cv:
       - institution: Seoul National University
         location: Seoul, South Korea
         area: Materials Science and Engineering
-        studyType: PhD, combined MS/PhD course
+        studyType: PhD
         start_date: "2017-03-01"
         end_date: "2022-08-29"
         highlights:
+          - "Combined MS/PhD course."
           - "Advisor: Prof. Miyoung Kim."
 
       - institution: Seoul National University

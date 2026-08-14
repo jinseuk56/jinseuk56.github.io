@@ -93,6 +93,34 @@
           margin-left: 0 !important;
         }
 
+        /* Education highlights are compact notes, not a bulleted list. Keep them left-aligned
+           when the metadata rail stacks above the entry on small screens. */
+        .cv #education + .card ul.items {
+          margin: 0.35rem 0 0.4rem 0.25rem;
+          padding: 0;
+          list-style: none;
+          text-align: left !important;
+        }
+
+        .cv #education + .card ul.items > li,
+        .cv #education + .card ul.items > li::marker,
+        .cv #education + .card ul.items .item {
+          margin: 0.2rem 0;
+          padding: 0;
+          list-style: none;
+          text-align: left !important;
+        }
+
+        .cv #education + .card ul.items > li::marker {
+          content: none;
+        }
+
+        @media (min-width: 576px) {
+          .cv #education + .card ul.items {
+            margin-left: 1.5rem;
+          }
+        }
+
         @media (max-width: 575.98px) {
           .cv ul.list-group > .list-group-item > .row {
             gap: 0.35rem;

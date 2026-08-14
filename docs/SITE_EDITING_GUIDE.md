@@ -44,6 +44,29 @@ The theme provides the Home link automatically. The remaining main-navigation en
 
 The old `/ryuserve/` and `/ryuserve/cv/` pages are redirects for old links. Keep them unless you intentionally want to break old bookmarks.
 
+## Content versus display format
+
+The site deliberately separates the information from the HTML/CSS that displays it:
+
+| Layer | What it controls | Typical files |
+| ----- | ---------------- | ------------- |
+| Content/data | Words, dates, links, entries, and their order | `_data/cv.yml`, `_bibliography/papers.bib`, `_pages/*.md`, `_posts/` |
+| Template/markup | Which HTML elements are generated and which fields are shown | `_includes/`, `_layouts/`, `_pages/*.md` |
+| Style/CSS | Alignment, spacing, font size/weight, colors, borders, responsive rules | `assets/css/`, `<style>` blocks in local includes |
+
+Edit the content layer for a wording or date change. Edit the template or style layer only when the same visual change should apply to many entries. `_site/` contains the final HTML after Jekyll combines these layers; it is a preview/build result, not an editing source.
+
+### A practical way to choose the file
+
+1. Decide whether the requested change is about **what the page says** or **how it looks**.
+2. For “what,” edit the relevant YAML, BibTeX, Markdown, or post file.
+3. For “how,” find the component that renders that content in the menu map, then edit its Liquid template or a scoped CSS rule.
+4. Rebuild and inspect the generated page. Never copy an edit back into `_site`; make the change in the source layer instead.
+
+Useful CSS properties for small, local adjustments are `text-align`, `font-weight`, `font-size`, `line-height`, `margin`, `padding`, `list-style`, `display`, and `color`. Prefer a selector scoped to the component (for example, `.cv #education + .card ul.items`) over a broad selector such as `ul` or `p`.
+
+Responsive rules use media queries. A rule outside `@media` applies at every width; a rule inside `@media (max-width: 575.98px)` applies to narrow/mobile layouts; a rule inside `@media (min-width: 576px)` applies to wider layouts. If a theme rule wins over yours, use a more specific component selector before reaching for `!important`.
+
 ## Home
 
 Edit `_pages/about.md`.
@@ -100,10 +123,35 @@ Example experience entry:
 
 - `_pages/cv.md` controls the page URL, title, and whether it appears in the main navigation.
 - `_includes/cv/render.liquid` is the CV page renderer and contains the date/location alignment rules.
+- The education, experience, and other CV entry templates are supplied by the `al_folio_cv` package unless a same-named file exists in this repository under `_includes/cv/`. Adding a local copy is the supported way to change that component’s generated HTML.
 - `_includes/cv/publications.liquid` and `_includes/cv/presentations.liquid` control the compact publication-style records.
 - `_includes/cv/skills.liquid` controls Skills.
 
 Edit the YAML for content. Edit the Liquid files only when changing the format for every entry.
+
+### CV content-to-style map
+
+| Desired change | Edit | Example |
+| -------------- | ---- | ------- |
+| Change an institution, title, date, location, or note | `_data/cv.yml` | Change `institution`, `start_date`, or `highlights` |
+| Add multiple education notes | `_data/cv.yml` | Use a YAML list under `highlights` |
+| Remove bullets or change Education-note alignment | `_includes/cv/render.liquid` | The scoped `#education + .card ul.items` rules control this |
+| Change the year/location rail | `_includes/cv/render.liquid` | Edit `.date-column` rules and the mobile media query |
+| Change the HTML structure of Education entries | Add `_includes/cv/education.liquid` | Copy the package template only when markup must change |
+| Change CV publication/presentation record styling | `_includes/cv/publications.liquid` or `_includes/cv/presentations.liquid` | Edit their local `<style>` blocks |
+| Change Publications-tab author/DOI/BibTeX layout | `_layouts/bib.liquid` | This is separate from the CV publication list |
+
+For example, these two education notes are content and belong in `_data/cv.yml`:
+
+```yaml
+highlights:
+  - "Combined MS/PhD course."
+  - "Advisor: Prof. Miyoung Kim."
+```
+
+The list above does not by itself decide whether bullets appear. The Education style rule in `_includes/cv/render.liquid` can hide the markers and keep both lines left-aligned at desktop and mobile widths. This is why changing YAML and changing the display format are separate edits.
+
+Avoid duplicate YAML keys such as two `highlights:` lines. Jekyll may build while retaining only the last value, and stricter YAML parsers may reject the file. Use one key with a list when you need multiple values.
 
 ## Publications
 

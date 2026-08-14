@@ -21,7 +21,7 @@ SENDePSIC is a Python package for exploring atomic structure and crystal phases 
     {% include figure.liquid path="assets/img/projects/concurrent-4dstem-edx.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Concurrent 4D-STEM and EDX data acquisition" caption="Concurrent 4D-STEM and EDX data provide complementary structural and chemical signals for analysis." %}
   </div>
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/perovskite-heterogeneity.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Nanoscale heterogeneity analysis in lead-halide perovskites" caption="Profile-based analysis helps resolve nanoscale heterogeneity in beam-sensitive perovskites from large 4D-STEM datasets." %}
+    {% include figure.liquid path="assets/img/projects/perovskite-heterogeneity.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Nanoscale heterogeneity analysis in lead-halide perovskites" caption="Structure analysis based on radial-average and radial-variance profiles helps resolve nanoscale heterogeneity in beam-sensitive perovskites from large 4D-STEM datasets." %}
   </div>
 </div>
 
