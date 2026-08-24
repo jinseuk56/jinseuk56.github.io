@@ -76,7 +76,7 @@ cv:
           - "4D-STEM, STEM-EELS/EDX, electron tomography, and multimodal acquisition for local structure, chemistry, and phase analysis."
           - "Application to functional oxides, energy materials, amorphous systems, and plasmonic nanostructures."
 
-      - name: Open Microscopy Software and Workflows
+      - name: Open-source Microscopy Software and Workflows
         highlights:
           - "Python and DigitalMicrograph tools for reproducible analysis, including DRCA, CAETomo, SENDePSIC, GMS3 Tools, etc."
           - "Interactive and scriptable workflows connecting acquisition, processing, classification, and reconstruction."
