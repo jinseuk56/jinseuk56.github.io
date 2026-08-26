@@ -4,7 +4,7 @@ title: 4D-STEM Processing and Visualization
 description: Practical analysis and visualisation tools for four-dimensional STEM datasets.
 importance: 4
 category: software
-github: https://github.com/jinseuk56/4DSTEM_processing
+github: https://github.com/jinseuk56/4dstem-epie.png
 img: assets/img/projects/4dstem-processing.png
 giscus_comments: false
 ---
@@ -18,7 +18,7 @@ This repository collects approachable tools and examples for processing four-dim
 
 <div class="project-gallery">
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/4dstem-processing.png" class="img-fluid rounded z-depth-1" alt="4D-STEM data-processing workflow" caption="4D-STEM processing is usually necessary to retrieve specific materials information, e.g., radial profile generation, dark-field imaging, center of mass calculation, etc." %}
+    {% include figure.liquid path="assets/img/projects/4dstem-epie.png" class="img-fluid rounded z-depth-1" alt="4D-STEM data-processing workflow" caption="4D-STEM processing is usually necessary to retrieve specific materials information, e.g., radial profile transformation, dark-field imaging, differential phase contrast imaging, etc." %}
   </div>
   <div class="project-figure">
     {% include figure.liquid path="assets/img/projects/4dstem-drca-amorphous-rdf.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="4D-STEM radial distribution function analysis of amorphous materials" caption="Investigation of local short-range and medium-range ordering in amorphous materials using radial distribution function (RDF) analysis." %}
@@ -28,4 +28,4 @@ This repository collects approachable tools and examples for processing four-dim
 ## Related research
 
 - **J. Ryu**, _et al._, [Correlative study between the local atomic and electronic structures of amorphous carbon materials via 4D-STEM and STEM-EELS](https://doi.org/10.1063/5.0100925), _Applied Physics Letters_ (2022).
-- **J. Ryu**, _et al._, [Resolving nanoscale heterogeneities in lead halide perovskites through low dose concurrent 4D-STEM-EDX mapping](https://doi.org/10.1002/adma.74382), _Advanced Materials_ (2026).
+- Q. Zeng, _et al._, [A hierarchical shell locks and stabilizes perovskite nanocrystals with near-unity quantum yield](https://doi.org/10.1126/science.ady1370), _Science_ (2026).

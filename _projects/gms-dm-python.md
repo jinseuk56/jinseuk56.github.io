@@ -5,7 +5,7 @@ description: Bridging Python and DigitalMicrograph for multidimensional STEM dat
 importance: 5
 category: software
 github: https://github.com/jinseuk56/GMS_DM_PYTHON
-img: assets/img/projects/gms-python-4dstem.png
+img: assets/img/projects/gms-python-empad.png
 giscus_comments: false
 ---
 

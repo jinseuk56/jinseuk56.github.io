@@ -4,7 +4,7 @@ title: TEM-Based Materials Characterization
 description: Connecting nanoscale structure, composition, and phase evolution across functional materials.
 importance: 2
 category: research
-img: assets/img/projects/perovskite-heterogeneity.png
+img: assets/img/projects/hzo-analysis.png
 giscus_comments: false
 ---
 
