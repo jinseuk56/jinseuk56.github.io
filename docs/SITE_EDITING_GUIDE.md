@@ -67,6 +67,18 @@ Useful CSS properties for small, local adjustments are `text-align`, `font-weigh
 
 Responsive rules use media queries. A rule outside `@media` applies at every width; a rule inside `@media (max-width: 575.98px)` applies to narrow/mobile layouts; a rule inside `@media (min-width: 576px)` applies to wider layouts. If a theme rule wins over yours, use a more specific component selector before reaching for `!important`.
 
+### Where the main menus get their styles
+
+| Menu | Content | Local markup/behaviour | Local style |
+| ---- | ------- | ---------------------- | ----------- |
+| Home | `_pages/about.md`, `assets/data/home-photos.json` | `_includes/home-photo-gallery.liquid` | `assets/css/home-photo-gallery.css` |
+| Projects | `_projects/*.md`, `_pages/projects.md` | `_includes/projects.liquid`, `_includes/project-gallery-styles.liquid` | `assets/css/project-gallery.css` |
+| Publications | `_bibliography/papers.bib`, `_pages/publications.md` | `_layouts/bib.liquid` | `assets/css/section-headings.css` plus the bibliography layout/theme styles |
+| Blog | `_posts/*.md`, `_pages/blog.md` | Theme post layout; photo-card markup is written in the post | `assets/css/post-grid.css` for photo-card posts |
+| CV | `_data/cv.yml`, `_pages/cv.md` | `_includes/cv/render.liquid` and the CV includes | CV rules in `_includes/cv/render.liquid` and the local CV includes |
+
+If a file is not listed as a local template, the corresponding HTML may come from an installed al-folio package. Do not edit files under `/home/ryuserve/gems/` or `_site/`; create a same-named local include when you need to override package markup, and keep site-specific CSS in this repository.
+
 ## Home
 
 Edit `_pages/about.md`.
