@@ -4,8 +4,8 @@ title: 4D-STEM Processing and Visualization
 description: Practical analysis and visualisation tools for four-dimensional STEM datasets.
 importance: 4
 category: software
-github: https://github.com/jinseuk56/4dstem-epie.png
-img: assets/img/projects/4dstem-processing.png
+github: https://github.com/jinseuk56/4DSTEM_processing
+img: assets/img/projects/4dstem-epie.png
 giscus_comments: false
 ---
 
