@@ -2,7 +2,7 @@
 layout: page
 title: Data-driven and AI-assisted Microscopy Analysis
 description: Turning high-dimensional microscopy data into interpretable spectral, structural, and compositional insight.
-importance: 1
+importance: 3
 category: research
 img: assets/img/projects/1d-cae-architecture.png
 giscus_comments: false

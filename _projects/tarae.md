@@ -2,7 +2,7 @@
 layout: page
 title: "Agentic Microscopy Data Analysis Software"
 description: An open-source, cross-platform agentic suite for multimodal electron-microscopy characterization.
-importance: 5
+importance: 1
 category: research
 giscus_comments: false
 ---

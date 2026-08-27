@@ -2,7 +2,7 @@
 layout: page
 title: Microscopy Data-Processing Workflows
 description: Correlative and dose-efficient workflows connecting acquisition, classification, and reconstruction.
-importance: 3
+importance: 5
 category: research
 img: assets/img/projects/4dstem-processing.png
 giscus_comments: false

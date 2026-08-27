@@ -2,7 +2,7 @@
 layout: page
 title: PTYKOR Project
 description: A physics-informed reconstruction framework targeting high depth resolution with multi-tilt electron ptychography.
-importance: 4
+importance: 2
 category: research
 giscus_comments: false
 ---
