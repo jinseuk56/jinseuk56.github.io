@@ -103,7 +103,9 @@ npm ci
 npm run photos:prepare
 ```
 
-The command recursively scans supported JPEG, PNG, and HEIC inputs in that folder and its subfolders (for example, `set_01/` and `set_02/`) and converts them into metadata-free 720-pixel WebP files. It removes EXIF and GPS metadata, reads the capture year from EXIF when available, and falls back to a year in the filename. The Home page shows 48 random photos at a time; hovering, focusing, or tapping a tile reveals its year, and **Shuffle photos** selects a new set.
+The command recursively scans supported JPEG, PNG, and HEIC inputs in that folder and its subfolders (for example, `set_01/`, `set_02/`, and `set_03/`) and converts them into metadata-free 720-pixel WebP files. It adds or updates the photos it finds without removing previously generated gallery images, so older source sets do not need to remain locally available. It removes EXIF and GPS metadata, reads the capture year from EXIF when available, and falls back to a year in the filename. The Home page shows 48 random photos at a time; hovering, focusing, or tapping a tile reveals its year, and **Shuffle photos** selects a new set.
+
+To deliberately synchronize the gallery to the source directory and remove generated images whose sources are no longer present, use `npm run photos:prepare -- --prune`. Only use this option when the source directory contains the complete intended photo collection.
 
 If a source file cannot be read, the command reports it and continues. Convert or repair that source file separately, then run the command again.
 
@@ -185,6 +187,7 @@ Minimal example:
 
 - Use the full DOI value only, without `https://doi.org/`, in `doi`.
 - The Publications page creates DOI and BibTeX buttons from this field.
+- Write publication and presentation titles in sentence case: capitalize only the first word and retain capitals only for proper nouns, chemical formulas, and established abbreviations such as `4D-STEM`, `EELS`, and `TEM`. Apply the same spelling and capitalization to the matching CV record.
 - The site customizes the author display so `J. Ryu` is emphasized. Keep the author notation consistent with existing entries.
 - Use `†` for first/co-first author and `*` for corresponding author where applicable; the legend is shown on the page.
 - `selected = {true}` marks a paper as selected for theme features that use selected papers.

@@ -82,6 +82,13 @@ cv:
           - "Interactive and scriptable workflows connecting acquisition, processing, classification, and reconstruction."
 
     Publications:
+      - title: "An interactive, automated 4D-STEM data acquisition and analysis routine for scanning electron nanobeam diffraction and ptychography experiments"
+        authors: "M. Danaie†, M. England, Y. Xu, R. Zhang, E. Darnbrough, J. W. de Boer, F. Allars, Z. Najeeb, A. Varambhia, J. Ryu, B. Bradnick, D. McGrouther, M. E. Schuster, C. S. Allen"
+        publisher: arXiv preprint
+        releaseDate: "2026"
+        url: https://doi.org/10.48550/arXiv.2608.13752
+        doi: 10.48550/arXiv.2608.13752
+
       - title: "Resolving nanoscale heterogeneities in lead halide perovskites through low dose concurrent 4D-STEM-EDX mapping"
         authors: "J. Ryu†, A. A. Sheader, M. Danaie, D. G. Hopkinson, K. E. MacArthur, N. K. Noel*, C. S. Allen*"
         publisher: Advanced Materials
@@ -96,7 +103,7 @@ cv:
         url: https://doi.org/10.1038/s41467-026-73457-7
         doi: 10.1038/s41467-026-73457-7
 
-      - title: "4D-STEM Nanoscale Phase Mapping of the Solid-Electrolyte Interphase"
+      - title: "4D-STEM nanoscale phase mapping of the solid-electrolyte interphase"
         authors: "Y. Xu†, J. Ryu, B. Jagger, J. Zhao, M. Pasta*, C. S. Allen*"
         publisher: ChemRxiv preprint
         releaseDate: "2026"
@@ -117,7 +124,7 @@ cv:
         url: https://doi.org/10.1126/science.ady1370
         doi: 10.1126/science.ady1370
 
-      - title: "Spatio-Compositional Characterization of the Solid Electrolyte Interphase in Solid-State Batteries via Nanobeam Electron Diffraction Microscopy"
+      - title: "Spatio-compositional characterization of the solid electrolyte interphase in solid-state batteries via nanobeam electron diffraction microscopy"
         authors: "J. Ihli*, Y. Chart†, J. Ryu, Y. Liang, P. Y. Huang, H. Guo, D. G. Hopkinson, G. Hughes, Y. Xu, M. Pasta, C. S. Allen*"
         publisher: Research Square preprint
         releaseDate: "2025"
@@ -159,7 +166,7 @@ cv:
         url: https://doi.org/10.1021/jacs.3c07411
         doi: 10.1021/jacs.3c07411
 
-      - title: "Boron-doped amorphous carbon deposited by DC sputtering for a hardmask: Microstructure and dry etching properties"
+      - title: "Boron-doped amorphous carbon deposited by DC sputtering for a hardmask: microstructure and dry etching properties"
         authors: "S. Kim†, U.-g. Kim, J. Ryu, D. Kim, M. Kim, Y.-C. Joo, S.-Y. Lee*"
         publisher: Applied Surface Science
         releaseDate: "2023"
@@ -195,88 +202,88 @@ cv:
         doi: 10.1016/j.ultramic.2021.113314
 
     Presentations:
-      - title: "Concurrent Acquisition of Many 4D-STEM-EDX Data Pairs and Effective Data Analysis Workflow for Beam-sensitive Materials"
+      - title: "Concurrent acquisition of many 4D-STEM-EDX data pairs and effective data analysis workflow for beam-sensitive materials"
         authors: "J. Ryu†, A. Sheader, M. Danaie, D. Hopkinson, K. MacArthur, N. Noel, C. Allen*"
         venue: "EMAG 2025, Manchester, United Kingdom"
         type: Oral presentation
         date: "2025"
 
-      - title: "Automation of Simultaneous 4D-STEM-EDX Acquisition and Data Analysis for Beam-sensitive Materials"
+      - title: "Automation of simultaneous 4D-STEM-EDX acquisition and data analysis for beam-sensitive materials"
         authors: "J. Ryu†, A. Sheader, M. Danaie, D. Hopkinson, K. MacArthur, N. Noel, C. Allen*"
         venue: "13th Asia Pacific Microscopy Congress, Brisbane, Australia"
         type: Oral presentation
         date: "2025"
         url: "https://www.scienceopen.com/hosted-document?doi=10.14293/APMC13-2025-0197"
 
-      - title: "Mapping Electrical Properties Using STEM-EBIC for Electric Field-Induced Resistance Changes in Amorphous Gallium Oxide"
+      - title: "Mapping electrical properties using STEM-EBIC for electric field-induced resistance changes in amorphous gallium oxide"
         authors: "S. Lee†, J. Ryu, S. Lee, P. Hein, M. Martin, Y. Kim, M. Kim*"
         venue: "13th Asia Pacific Microscopy Congress, Brisbane, Australia"
         type: Oral presentation
         date: "2025"
         url: "https://www.scienceopen.com/hosted-document?doi=10.14293/APMC13-2025-0244"
 
-      - title: "In-Situ Biasing TEM Analysis of Resistive Switching in Amorphous GaOx for Next-Generation Memory Applications"
+      - title: "In-situ biasing TEM analysis of resistive switching in amorphous GaOx for next-generation memory applications"
         authors: "S. Lee†, J. Ryu, H. Philipp, M. Martin, M. Kim*"
         venue: "Materials Research Society Fall Meeting, Boston, United States"
         type: Oral presentation
         date: "2024"
 
-      - title: "Ptychography Optimization for Atomic Analysis of Bending Mode in Bilayer Transition Metal Dichalcogenide Translational Motion"
+      - title: "Ptychography optimization for atomic analysis of bending mode in bilayer transition metal dichalcogenide translational motion"
         authors: "Y. Chang†, J. Ryu, H. Yoo, H. N. Han, M. Kim*"
         venue: "17th European Microscopy Congress, Copenhagen, Denmark"
         type: Oral presentation
         date: "2024"
         url: "https://doi.org/10.1051/bioconf/202412922029"
 
-      - title: "GPU-based Fast Reconstruction and DL-based Feature Extraction for EELS Tomography"
+      - title: "GPU-based fast reconstruction and DL-based feature extraction for EELS tomography"
         authors: "J. Ryu†, J. Jo, H. Kim, K. T. Nam, M. Kim*"
         venue: "20th International Microscopy Congress, Busan, South Korea"
         type: Oral presentation
         date: "2023"
 
-      - title: "Exploring Ionic Migration and Structural Evolution in Dielectric Devices"
+      - title: "Exploring ionic migration and structural evolution in dielectric devices"
         authors: "J. Ryu† (on behalf of Prof. Miyoung Kim), G. Kim, S. Lee, M. Kim*"
         venue: "20th International Microscopy Congress, Busan, South Korea"
         type: Invited talk
         date: "2023"
 
-      - title: "A Comprehensive Nanoscale Characterization of Amorphous Carbon Films through STEM-EELS and 4D-STEM"
+      - title: "A comprehensive nanoscale characterization of amorphous carbon films through STEM-EELS and 4D-STEM"
         authors: "J. Ryu†, S. Lee, S. Kim, Y.-C. Joo, M. Kim*"
         venue: "20th International Microscopy Congress, Busan, South Korea"
         type: Oral presentation
         date: "2023"
 
-      - title: "Revealing the Resistive Switching Mechanism in Transition Metal Oxide Film Using In-situ Biasing TEM"
+      - title: "Revealing the resistive switching mechanism in transition metal oxide film using in-situ biasing TEM"
         authors: "S. Lee†, J. Ryu, S. Y. Kim, G. Park, S. D. Hyun, S. Y. Yang, M. Kim*"
         venue: "20th International Microscopy Congress, Busan, South Korea"
         type: Oral presentation
         date: "2023"
 
-      - title: "Unraveling Surface Plasmon Peak Splitting in Silver Nanoparticles Decorated on ZnO Nanorods via Monochromated STEM EELS Tomography"
+      - title: "Unraveling surface plasmon peak splitting in silver nanoparticles decorated on ZnO nanorods via monochromated STEM EELS tomography"
         authors: "J. Jo†, J. Ryu, M. Kim*"
         venue: "20th International Microscopy Congress, Busan, South Korea"
         type: Poster presentation
         date: "2023"
 
-      - title: "Unsupervised Learning Strategies for Extracting Features from STEM-derived Multi-dimensional Data"
+      - title: "Unsupervised learning strategies for extracting features from STEM-derived multi-dimensional data"
         authors: "J. Ryu†, J. Jo, S. Lee, M. Kim"
         venue: "Korea Society of Microscopy Spring Conference, Daejeon, South Korea"
         type: Invited talk
         date: "2023"
 
-      - title: "A Machine-learning Approach to Characterization of Amorphous Materials with EELS-SI and 4D-STEM"
+      - title: "A machine-learning approach to characterization of amorphous materials with EELS-SI and 4D-STEM"
         authors: "J. Ryu†, S. Lee, S. Kim, I. Yoo, Y.-C. Joo, M. Kim*"
         venue: "Materials Research Society Spring Meeting, Hawaii, United States"
         type: Poster presentation
         date: "2022"
 
-      - title: "Three-dimensional Characterization of Nanoparticles with Simultaneously Acquired Bright-field, Dark-field, and Secondary Electron Signals in STEM"
+      - title: "Three-dimensional characterization of nanoparticles with simultaneously acquired bright-field, dark-field, and secondary electron signals in STEM"
         authors: "J. Jo†, K. MacArthur, J. Ryu, H. Kim, S. Collins, K. Müller-Caspary, K. Nam, M. Kim, R. E. Dunin-Borkowski*"
         venue: "PICO 2021, virtual conference"
         type: Poster presentation
         date: "2021"
 
-      - title: "Feature Extraction and Reconstruction of Electron Energy Loss Spectroscopy by Non-negative Matrix Factorization"
+      - title: "Feature extraction and reconstruction of electron energy loss spectroscopy by non-negative matrix factorization"
         authors: "J. Ryu, J. Jo, J. Lee†, M. Kim*"
         venue: "12th Asia Pacific Microscopy Congress, Hyderabad, India"
         type: Oral presentation

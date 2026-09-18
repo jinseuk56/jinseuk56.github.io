@@ -5,7 +5,8 @@ import process from "node:process";
 import exifr from "exifr";
 import sharp from "sharp";
 
-const sourceDirectory = process.argv[2] || "/home/ryuserve/github_repo/resources/photos";
+const sourceDirectory = process.argv.slice(2).find((argument) => !argument.startsWith("--")) || "/home/ryuserve/github_repo/resources/photos";
+const pruneMissing = process.argv.includes("--prune");
 const outputDirectory = path.resolve("assets/img/home");
 const manifestPath = path.resolve("assets/data/home-photos.json");
 const imageExtensions = new Set([".heic", ".jpeg", ".jpg", ".png"]);
@@ -40,7 +41,17 @@ if (files.length === 0) {
 await mkdir(outputDirectory, { recursive: true });
 await mkdir(path.dirname(manifestPath), { recursive: true });
 
-const photos = [];
+let previousPhotos = [];
+try {
+  const previousManifest = JSON.parse(await readFile(manifestPath, "utf8"));
+  previousPhotos = previousManifest.photos || [];
+} catch (error) {
+  if (error.code !== "ENOENT") {
+    console.warn(`Could not read the existing photo manifest: ${error.message.split("\n")[0]}`);
+  }
+}
+
+const generatedPhotos = [];
 const skipped = [];
 let sourceBytes = 0;
 let outputBytes = 0;
@@ -50,52 +61,48 @@ for (const { absolutePath: sourcePath, relativePath } of files) {
     const id = photoId(relativePath);
     const outputName = `${id}.webp`;
     const outputPath = path.join(outputDirectory, outputName);
-    const [metadata, exif, sourceInfo] = await Promise.all([
-      sharp(sourcePath, { animated: false, failOn: "none" }).metadata(),
+    const [exif, sourceInfo] = await Promise.all([
       exifr.parse(sourcePath, ["DateTimeOriginal", "CreateDate", "ModifyDate"]).catch(() => null),
       stat(sourcePath),
     ]);
 
-    await sharp(sourcePath, { animated: false, failOn: "none" })
+    const outputInfo = await sharp(sourcePath, { animated: false, failOn: "none" })
       .rotate()
       .resize({ width: 720, height: 720, fit: "inside", withoutEnlargement: true })
       .webp({ quality: 80, smartSubsample: true })
       .toFile(outputPath);
 
-    const outputInfo = await stat(outputPath);
     const capturedAt = exif?.DateTimeOriginal || exif?.CreateDate || exif?.ModifyDate;
     const year = capturedAt ? String(capturedAt.getFullYear()) : fallbackYear(relativePath);
     sourceBytes += sourceInfo.size;
     outputBytes += outputInfo.size;
-    photos.push({
+    generatedPhotos.push({
       file: outputName,
       year: year || "Undated",
-      orientation: metadata.width >= metadata.height ? "landscape" : "portrait",
+      orientation: outputInfo.width >= outputInfo.height ? "landscape" : "portrait",
     });
   } catch (error) {
     skipped.push({ filename: relativePath, error: error.message.split("\n")[0] });
   }
 }
 
-const expectedFiles = new Set(photos.map(({ file }) => file));
-try {
-  const previousManifest = JSON.parse(await readFile(manifestPath, "utf8"));
-  const staleFiles = (previousManifest.photos || [])
-    .map(({ file }) => file)
-    .filter((file) => file.endsWith(".webp") && !expectedFiles.has(file));
+const photosByFile = new Map(previousPhotos.map((photo) => [photo.file, photo]));
+generatedPhotos.forEach((photo) => photosByFile.set(photo.file, photo));
+const photos = pruneMissing ? generatedPhotos : [...photosByFile.values()];
+
+if (pruneMissing) {
+  const expectedFiles = new Set(photos.map(({ file }) => file));
+  const staleFiles = previousPhotos.map(({ file }) => file).filter((file) => file.endsWith(".webp") && !expectedFiles.has(file));
   await Promise.all(staleFiles.map((file) => unlink(path.join(outputDirectory, file))));
   if (staleFiles.length > 0) {
     console.log(`Removed ${staleFiles.length} stale generated thumbnail(s).`);
-  }
-} catch (error) {
-  if (error.code !== "ENOENT") {
-    console.warn(`Could not clean stale thumbnails: ${error.message.split("\n")[0]}`);
   }
 }
 
 await writeFile(manifestPath, `${JSON.stringify({ photos }, null, 2)}\n`, "utf8");
 
-console.log(`Prepared ${photos.length} metadata-free WebP thumbnails.`);
+console.log(`Prepared ${generatedPhotos.length} metadata-free WebP thumbnail(s).`);
+console.log(`Gallery manifest contains ${photos.length} photo(s).`);
 if (skipped.length > 0) {
   console.warn(`Skipped ${skipped.length} unreadable source image(s):`);
   skipped.forEach(({ filename }) => console.warn(`- ${filename}`));
