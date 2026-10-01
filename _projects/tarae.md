@@ -20,6 +20,6 @@ Its embedded agent is designed to accept heterogeneous data and a high-level sci
 
 <div class="project-gallery">
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/TARAE_main.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 90vw, 95vw" alt="TARAE workflow connecting a researcher, an AI agent, and supervised analysis software" caption="TARAE keeps the researcher, AI agent, and local execution environment in a transparent, supervised analysis loop." %}
+    {% include figure.liquid path="assets/img/projects/TARAE_main.png" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 90vw, 95vw" alt="TARAE workflow connecting a researcher, an AI agent, and supervised analysis software" caption="TARAE keeps the researcher, AI agent, and local execution environment in a transparent, supervised analysis loop" %}
   </div>
 </div>

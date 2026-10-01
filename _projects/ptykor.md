@@ -18,9 +18,9 @@ Conventional electron tomography requires high-dose, high-angle tilt series and 
 
 <div class="project-gallery">
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/PTYKOR_main.PNG" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="PTYKOR research objective, methods, agent-assisted workflow, and three-year roadmap" caption="PTYKOR combines multi-tilt 4D-STEM, multislice ptychographic reconstruction, virtual depth scanning, and physics-informed AI within a three-year research roadmap." %}
+    {% include figure.liquid path="assets/img/projects/PTYKOR_main.PNG" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="PTYKOR research objective, methods, agent-assisted workflow, and three-year roadmap" caption="PTYKOR combines multi-tilt 4D-STEM, multislice ptychographic reconstruction, virtual depth scanning, and physics-informed AI" %}
   </div>
   <div class="project-figure">
-    {% include figure.liquid path="assets/img/projects/PTYKOR_preliminary_result.PNG" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Preliminary PTYKOR ePIE reconstructions of a twisted WSe2 bilayer and a gold nanoparticle" caption="Preliminary ePIE reconstructions of a twisted WSe2 bilayer and a gold nanoparticle demonstrate the current single-slice and multislice workflows based on classical ePIE algorithms." %}
+    {% include figure.liquid path="assets/img/projects/PTYKOR_preliminary_result.PNG" class="img-fluid rounded z-depth-1" sizes="(min-width: 768px) 45vw, 95vw" alt="Preliminary PTYKOR ePIE reconstructions of a twisted WSe2 bilayer and a gold nanoparticle" caption="Preliminary ptychographical reconstructions of a twisted WSe2 bilayer and a gold nanoparticle demonstrate the current single-slice and multislice workflows based on classical ePIE algorithms" %}
   </div>
 </div>
